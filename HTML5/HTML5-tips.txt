@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+The character encoding (charset) declaration is also very simple:
+	<meta charset="UTF-8">
+	* The default character encoding in HTML5 is UTF-8.
+
+New HTML5 Elements
+	New semantic elements like <header>, <footer>, <article>, and <section>.
+	New form control attributes like number, date, time, calendar, and range.
+	New graphic elements: <svg> and <canvas>.
+	New multimedia elements: <audio> and <video>.
+
+New HTML5 API's (Application Programming Interfaces)
+	New Semantic Elements: These are like <header>, <footer>, and <section>.
+	Forms 2.0: Improvements to HTML web forms where new attributes have been introduced for <input> tag.
+	Persistent Local Storage: To achieve without resorting to third-party plugins.
+	WebSocket : A a next-generation bidirectional communication technology for web applications.
+	Server-Sent Events: HTML5 introduces events which flow from web server to the web browsers and they are called Server-Sent Events (SSE).
+	Canvas: This supports a two-dimensional drawing surface that you can program with JavaScript.
+	Audio & Video: You can embed audio or video on your web pages without resorting to third-party plugins.
+	Geolocation: Now visitors can choose to share their physical location with your web application.
+	Microdata: This lets you create your own vocabularies beyond HTML5 and extend your web pages with custom semantics.
+	Drag and drop: Drag and drop the items from one location to another location on a the same webpage.
+	
+	Local storage is a powerful replacement for cookies.
+	
+HTML5 WHATWG First Public Draft	2008
+HTML5 WHATWG Living Standard	2012
+HTML5 W3C Final Recommendation	2014
+
+New Semantic/Structural Elements
+	<article>	Defines an article in the document
+	<aside>		Defines content aside from the page content
+	<bdi>		Defines a part of text that might be formatted in a different direction from other text
+	<details>	Defines additional details that the user can view or hide
+	<dialog>	Defines a dialog box or window
+	<figcaption>Defines a caption for a <figure> element
+	<figure>	Defines self-contained content, like illustrations, diagrams, photos, code listings, etc.
+	<footer>	Defines a footer for the document or a section
+	<header>	Defines a header for the document or a section
+	<main>		Defines the main content of a document
+	<mark>		Defines marked or highlighted text
+	<menuitem> 	Defines a command/menu item that the user can invoke from a popup menu
+	<meter>		Defines a scalar measurement within a known range (a gauge)
+	<nav>		Defines navigation links in the document
+	<progress>	Defines the progress of a task
+	<rp>		Defines what to show in browsers that do not support ruby annotations
+	<rt>		Defines an explanation/pronunciation of characters (for East Asian typography)
+	<ruby>		Defines a ruby annotation (for East Asian typography)
+	<section>	Defines a section in the document
+	<summary>	Defines a visible heading for a <details> element
+	<time>		Defines a date/time
+	<wbr>		Defines a possible line-break
+	
+New Form Elements
+	<datalist>	Defines pre-defined options for input controls
+	<keygen>	Defines a key-pair generator field (for forms)
+	<output>	Defines the result of a calculation
+	
+New Input Types
+	New Input Types	
+		color, date, datetime, datetime-local, email, month, number, range, search, tel, time, url, week
+
+	New Input Attributes
+		autocomplete, autofocus, form, formaction, formenctype, formmethod, formnovalidate, formtarget, height and width, list, min and max, multiple, pattern (regexp), placeholder, required, step
+
+HTML5 - New Attribute Syntax
+	HTML5 allows 4 different syntaxes for attributes.
+		This example demonstrates the different syntaxes used in an <input> tag:
+			Type			Example
+			Empty			<input type="text" value="John Doe" disabled>
+			Unquoted		<input type="text" value=John>
+			Double-quoted	<input type="text" value="John Doe">
+			Single-quoted	<input type="text" value='John Doe'>
+			
+HTML5 Graphics
+	<canvas>	Defines graphic drawing using JavaScript
+	<svg>		Defines graphic drawing using SVG
+	
+New Media Elements
+	<audio>	 Defines sound or music content
+	<embed>	 Defines containers for external applications (like plug-ins)
+	<source> Defines sources for <video> and <audio>
+	<track>	 Defines tracks for <video> and <audio>
+	<video>	 Defines video or movie content
