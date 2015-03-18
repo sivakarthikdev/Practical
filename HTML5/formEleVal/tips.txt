@@ -1,0 +1,136 @@
+* HTML forms are used to collect user input.
+  HTML forms contain form elements.
+	* Form elements are different types of input elements, checkboxes, radio buttons, submit buttons, and more.
+* The form itself is not visible. Also note that the default width of a text field is 20 characters. 
+* <input type="submit"> defines a button for submitting a form to a form-handler.
+* The form-handler is typically a server page with a script for processing input data.
+* The form-handler is specified in the form's action attribute
+
+The Action Attribute
+	* The action attribute defines the action to be performed when the form is submitted.
+	* The common way to submit a form to a server, is by using a submit button.
+	* Normally, the form is submitted to a web page on a web server.
+	
+	Eg : 
+		<form action="action_page.php">
+		If the action attribute is omitted, the action is set to the current page.
+
+The Method Attribute
+	* The method attribute specifies the HTTP method (GET or POST) to be used when submitting the forms
+	   <form action="action_page.php" method="GET">  or <form action="action_page.php" method="POST">
+	When to Use GET?
+		* You can use GET (the default method):
+		* If the form submission is passive (like a search engine query), and without sensitive information.
+		* When you use GET, the form data will be visible in the page address
+		eg : 
+			action_page.php?firstname=Mickey&lastname=Mouse
+		* GET is best suited to short amounts of data. Size limitations are set in your browser.
+
+	When to Use POST?
+		* You should use POST:
+		* If the form is updating data, or includes sensitive information (password).
+		* POST offers better security because the submitted data is not visible in the page address.
+
+The Name Attribute
+	* To be submitted correctly, each input field must have a name attribute
+	
+Grouping Form Data with <fieldset>
+	* The <fieldset> element groups related data in a form.
+	* The <legend> element defines a caption for the <fieldset> element.
+	
+HTML Form Attributes
+	An HTML <form> element, with all possible attributes set, will look like this:
+	eg : 
+		<form action="action_page.php" method="GET" target="_blank" accept-charset="UTF-8" enctype="application/x-www-form-urlencoded" autocomplete="off" novalidate>
+			form elements
+		</form>
+	Here is the list of <form> attributes:
+	Attribute		   Description
+	accept-charset		Specifies the charset used in the submitted form (default: the page charset).
+	action				Specifies an address (url) where to submit the form (default: the submitting page).
+	autocomplete		Specifies if the browser should autocomplete the form (default: on).
+	enctype				Specifies the encoding of the submitted data (default: is url-encoded).
+	method				Specifies the HTTP method used when submitting the form (default: GET).
+	name				Specifies a name used to identify the form (for DOM usage: document.forms.name).
+	novalidate			Specifies that the browser should not validate the form.
+	target				Specifies the target of the address in the action attribute (default: _self).
+
+HTML5 Form Elements
+	<datalist> <keygen> <output>
+	By default, browsers do not display unknown elements. New elements will not destroy your page.
+	
+	<datalist>
+		The <datalist> element specifies a list of pre-defined options for an <input> element.
+		Users will see a drop-down list of pre-defined options as they input data.
+		The list attribute of the <input> element, must refer to the id attribute of the <datalist> element.
+	
+	<keygen>
+		The purpose of the <keygen> element is to provide a secure way to authenticate users.
+		The <keygen> element specifies a key-pair generator field in a form.
+		When the form is submitted, two keys are generated, one private and one public.
+		The private key is stored locally, and the public key is sent to the server.
+		The public key could be used to generate a client certificate to authenticate the user in the future.
+		The obvious usage is client authentication. It can be used to improve security in combination with a passphrase or smartcard, or to be a convenient replacement for entering a password.
+		The main issue with client certificates is that it is bound to the browser. So if you are on another computer, you don't have access to them unless you took precautions.
+	
+	<output>
+		The <output> element represents the result of a calculation (like one performed by a script).
+		
+HTML5 Input Types
+   color, date, datetime, datetime-local, email, month, number, range, search, tel, time, url, week
+	* Input types, not supported by old web browsers, will behave as input type text.
+
+	Input Restrictions
+	Here is a list of some common input restrictions (some are new in HTML5):
+
+	Attribute	Description
+	disabled	Specifies that an input field should be disabled
+	max			Specifies the maximum value for an input field
+	maxlength	Specifies the maximum number of character for an input field
+	min			Specifies the minimum value for an input field
+	pattern		Specifies a regular expression to check the input value against
+	readonly	Specifies that an input field is read only (cannot be changed)
+	required	Specifies that an input field is required (must be filled out)
+	size		Specifies the width (in characters) of an input field
+	step		Specifies the legal number intervals for an input field
+	value		Specifies the default value for an input field
+	
+	The input type datetime is removed from the HTML standard. Use datetime-local instead.
+	The <input type="search"> is used for search fields (a search field behaves like a regular text field).
+	The <input type="tel"> is used for input fields that should contain a telephone number, The tel type is currently supported only in Safari 8.
+	
+	Input Type: url
+		The <input type="url"> is used for input fields that should contain a URL address.
+		Depending on browser support, the url field can be automatically validated when submitted
+
+HTML5 Input Attributes
+	autocomplete, autofocus, form, formaction, formenctype, formmethod, formnovalidate, formtarget, height and width, list, min and max, multiple, pattern (regexp), placeholder, required, step
+HTML5 Form Attributes
+	autocomplete, novalidate
+	
+HTML5 Form & Input Attributes	
+  The autocomplete Attribute
+	* The autocomplete attribute specifies whether a form or input field should have autocomplete on or off.
+	* When autocomplete is on, the browser automatically complete values based on values that the user has entered before.
+	  Tip: It is possible to have autocomplete "on" for the form, and "off" for specific input fields, or vice versa.
+	* The autocomplete attribute works with <form> and the following <input> types: text, search, url, tel, email, password, datepickers, range,    and color.
+	
+  The novalidate Attribute
+	* The novalidate attribute is a <form> attribute
+	* When present, novalidate specifies that form data should not be validated when submitted.
+
+  The autofocus Attribute
+	* The autofocus attribute is a boolean attribute.
+	* When present, it specifies that an <input> element should automatically get focus when the page loads.
+	
+  The form Attribute
+	The form attribute specifies one or more forms an <input> element belongs to.
+	Tip: To refer to more than one form, use a space-separated list of form ids.
+ 
+  The formaction Attribute
+	* The formaction attribute specifies the URL of a file that will process the input control when the form is submitted.
+	* The formaction attribute overrides the action attribute of the <form> element.
+	* The formaction attribute is used with type="submit" and type="image".
+  The formenctype Attribute
+	
+  

@@ -1,0 +1,7 @@
+HTML5 introduces application cache, which means that a web application is cached, and accessible without an internet connection.
+
+Application cache gives an application three advantages:
+	Offline browsing - users can use the application when they're offline
+	Speed - cached resources load faster
+	Reduced server load - the browser will only download updated/changed resources from the server
+	

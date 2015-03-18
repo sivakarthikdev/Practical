@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML5 Form Validation and Elements</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<style>
+		keygen{display:none;}
+	</style>
+  </head>
+  <body>
+	<section id="wrapper">
+	  <h1>Form Validation and Form Elements</h1>
+	  <form autocomplete="off" oninput="result.value=states.value" method="POST" id="mainForm">
+		<input type="text" name="fname" placeholder="Enter the name" />
+		<input type="date" name="dob" id="dob" placeholder="select your date of birth" min="2000-12-31" max="2016-12-30" />
+		<input type="color" name="favcolor" placeholder="choose the color" />
+		<input type="number" name="age" placeholder="Enter the age" min="1" max="50" />
+		<input type="email" name="email" placeholder="Enter the Email Address" autocomplete="on" autofocus/>
+		<input type="url" name="cwenaddress" placeholder="Company website URL" autocomplete="on" />
+		<input list="states" name="states" placeholder="Select the states" />
+		<datalist id="states">
+			<option value="TamilNadu">Temple</option>
+			<option value="Kerla">Nature</option>
+			<option value="Karnataka">Festival</option>
+			<option value="Andhra Pradesh">Foods</option>
+		</datalist>
+		<output name="result" for="states"></output>
+		<keygen name="security" keytype="RSA" />
+		<br /><br />
+		<input type="submit" value="Submit current action" />
+		<input type="submit" value="Submit different action" formmethod="get" formaction="test.php">
+		<span id="timer"></span>
+	  </form> <br /><br />
+	  
+	  <!--Form attribute-->
+	  <p>External input connect with mainForm</p>
+	  <input type="text" name="lname" form="mainForm" />
+	
+	</section>
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script>
+		var timer = function(){
+		  var tim = new Date(jQuery.now());
+		  var setTime = tim.getHours() + ':' + tim.getMinutes() + ':' + tim.getSeconds();
+		  $('#timer').html(setTime);
+		}
+		setInterval('timer()',1);
+	</script>
+  </body>
+</html>
