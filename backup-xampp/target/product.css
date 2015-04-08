@@ -1,0 +1,24 @@
+#wrapper{margin:0px auto;width:75%;border:1px solid #fff;float:right;}
+.link_section{width:75%;border:1px solid blue;margin:0px auto;margin-top:10px;border-radius:5px;float:left;}
+.content_wrapper{width:75%;border:1px solid green;margin:0px auto;margin-top:10px;border-radius:5px;float:left;}
+.left_content{width:28%;border:1px solid red;float:left;margin:10px;}
+.right_content{width:65%;border:1px solid #987;float:left;margin:10px;}
+.category_list_block{padding:10px;}
+details ul{margin-left:-20px;}
+details ul li{list-style:none;}
+details summary{background:#F8F8F8 ;color:#675;font-weight:bold;border-bottom:1px solid #000;cursor:pointer;}
+.category_list{margin: 10px;border: 1px solid #101010 ;border-radius: 5px;text-align: left;}
+.link_section nav{float:right;width:50%;margin:10px;}
+.link_section nav a{color:#280000;padding:5px;font-weight:bold;font-size:16px;}
+.logo{width:40%;border:2px solid #003366;margin:10px;float:left;}
+.logo h3{line-height:5px;}
+.right_block_content .block_content{width:45%;float:left;border:1px solid #453;margin:8px;border-radius:3px;}
+.right_block_content .block_content img{margin-left:15px	;}
+.right_block_content .block_content .product_title{text-align:center;}
+.right_block_content .block_content .price_pro{font-weight:bold;color:#00008B;margin-left:65px;}
+.right_block_content .block_content .product_title a{text-decoration:none;color:#8B0000;}
+.sort_block{float:right;margin:10px;color:#876;font-weight:bold}
+.rating_count{float:right;margin-right:20px;color:#987;}
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}

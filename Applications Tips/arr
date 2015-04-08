@@ -1,0 +1,126 @@
+Backbone JS
+	Backbone is a JavaScript library with a RESTful JSON interface and is based on the model–view–presenter application design paradigm. Backbone is known for being lightweight,
+
+jquery trigger
+	Execute all handlers and behaviors attached to the matched elements for the given event type
+
+ajax readystate
+	When a request is send to a server, we want to perform some actions based on the response
+
+	Holds the status of the XMLHttpRequest. Changes from 0 to 4: 
+	0: request not initialized 
+	1: server connection established(Defined)(create)(configure)
+	2: request received 
+	3: request processing  
+	4: request finished and response is ready
+
+	Apply and Call
+		 To invoke(raise) the function with arguments to an objects
+		 	Apply : parameter pass via array
+		 	call  : parameter pass via comma seprate
+
+Other Media Types
+Media Type	Description
+
+
+aural Used for speech and sound synthesizers
+handheld Used for small or handheld devices
+
+all	Used for all media type devices
+print Used for printers
+projection	Used for projected presentations, like slides
+screen	Used for computer screens
+tv	Used for television-type devices	
+
+Script add
+	Old examples may have type="text/javascript" in the <script> tag. This is no longer required. JavaScript is the default scripting language in all modern browsers and in HTML5
+	script End of body tage -- > This is to avoid blocking html rendering while dowloading scripts what improves site responsiveness
+
+Javascirpt variable
+	Variable names must begin with a letter
+	Variable names can also begin with $ and _ (but we will not use it)
+	Variable names are case sensitive (y and Y are different variables)
+	Both JavaScript statements and JavaScript variables are case-sensitive
+
+Javascript has dynamic datatypes,This means same variable we can use different data types
+
+Array :
+	condensed Array
+		var cars=new Array("Saab","Volvo","BMW");
+	literal Array
+		var cars=["Saab","Volvo","BMW"];
+
+With JavaScript all variables can be objects
+
+Object --> Objects are just data, with properties and methods.
+	Properties are values associated with objects.
+	Methods are actions that objects can perform
+
+In object oriented languages, properties and methods are often called object members
+
+It is common, in object oriented languages, to use camel-case names.You will often see names like someMethod(),instead of some_method().
+
+return
+	Sometimes you want your function to return a value back to where the call was made.
+	This is possible by using the return statement.
+	When using the return statement, the function will stop executing, and return the specified value.
+	The return statement is also used when you simply want to exit a function. The return value is optional
+
+Variable
+	lifetime of variables:
+		Local variables are deleted as soon as the function is completed
+		Global variables are deleted when you close the page.
+
++ operator
+	If you add a number and a string, the result will be a string!
+
+break --> The break statement "jumps out" of a loop.
+continue --> The continue statement "jumps over" one iteration in the loop
+
+Javascript is prototype based language not class based 
+
+What do you understand by this keyword in JavaScript? 
+	Ans: In JavaScript the this is a context-pointer and not an object pointer. It gives you the top-most context that is placed on the stack. The following gives two different results (in the browser, where by-default the window object is the 0-level context):
+
+Knockout JS
+	Server side access
+
+
+'' == '0' // false
+0 == '' // true
+0 == '0' // true
+false == 'false' // false
+false == '0' // true
+false == undefined // false
+false == null // false
+null == undefined // true
+Number(“Hello world!”); //NaN
+Number(“”); //0
+Number(“000010”); //10
+Number(true); //1
+Number(NaN); //NaN
+
+
+var myfunc = function() {} defines a variable that references an anonymous function.
+function myfunc() {} defines a named function "myfunc"
+
+
+What will be the output of below statement?
+alert(NaN == NaN);
+Ans:it will show false
+because NaN is not equal to any value, including NaN.
+
+
+What is the HTML DOM?
+DOM means Document Object Model.
+When a web page is loaded, the browser creates a Document Object Model of the page.	
+
+
+Javascript Timing Events
+	setInterval,setTimeout
+
+When onLoad and onunload events are used in javascript?
+	The onload and onunload events are triggered when the user enters or leaves the page.
+	The onload event can be used to check the visitor's browser type and browser version, and load the proper version of the web page based on the information.
+	The onload and onunload events can be used to deal with cookies.
+

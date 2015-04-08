@@ -1,0 +1,788 @@
+* A JavaScript function is a block of JavaScript code
+
+* Keeping all JS code in one place, is always a good habit.
+
+* It is a good idea to place scripts at the bottom of the <body> element, This can improve page load, because HTML display is not blocked by scripts loading.
+
+* Placing JavaScripts in external files has some advantages:
+	It separates HTML and code.
+	It makes HTML and JavaScript easier to read and maintain
+	Cached JavaScript files can speed up page loads.
+
+* JavaScript does not have any built-in display functions.
+	JavaScript Display Possibilities
+		JavaScript can "display" data in different ways:
+			Writing into an alert box, using window.alert().
+			Writing into the HTML output using document.write().
+			Writing into an HTML element, using innerHTML.
+			Writing into the browser console, using console.log().
+
+JavaScript Programs
+	A computer program is a list of "instructions" to be "executed" by a computer.
+	JavaScript is the most popular programming language in the world.
+	In a programming language, computer instructions are called statements.
+	The statements are executed, one by one, in the same order as they are written.
+
+* JavaScript programs (and JavaScript statements) are often called JavaScript code.
+
+
+JavaScript Statements
+	The purpose of a statement, is to tell the computer what to do.
+	In HTML, JavaScript statements are executed by the web browser.
+	JavaScript statements are separated by semicolon:
+	In HTML, JavaScript statements are "instructions" to be "executed" by the web browser.
+	eg : This statement tells the browser to write "Hello Dolly." inside an HTML element with id="demo":
+		document.getElementById("demo").innerHTML = "Hello Dolly.";
+	JavaScript statements are composed of:
+		Values, Operators, Expressions, Keywords, and Comments.
+
+JavaScript Values
+	The JavaScript syntax defines two types of values: Fixed values and variable values.
+		Fixed values are called literals. 
+		Variable values are called variables.
+
+		Fixed Value : 
+			eg : Number = 34.243, String = "Karthikeyan", Expression = 4+5;
+
+		Variable Value :
+			eg : var x;
+
+Javascript Comments
+	Not all JavaScript statements are "executed".
+	Code after double slashes // or between /* and */ is treated as a comment.
+	Comments are ignored, and will not be executed:
+	JavaScript comments can be used to explain the code, and make the code more readable.
+	JavaScript comments can also be used to prevent execution, when testing alternative code.
+	It is most common to use single line comments.Block comments are often used for formal documentation.
+
+JavaScript Keywords
+	JavaScript keywords are used to identify actions to be performed.
+	JavaScript keywords are reserved words that cannot be used as variable names (or any other things).
+	The var keyword tells the browser to create a new variable
+		eg : 	var x = 5 + 6;
+				var y = x * 10;
+		Keyword			Description
+		break			Terminates a switch or a loop
+		catch			Marks the block of statements to be executed when an error occurs in a try block
+		continue		Jumps out of a loop and starts at the top
+		debugger		Stops the execution of JavaScript, and calls (if available) the debugging function
+		do ... while	Executes a block of statements, and repeats the block, while a condition is true
+		for				Marks a block of statements to be executed, as long as a condition is true
+		for ... in		Marks a block of statements to be executed, for each element of an object (or array)
+		function		Declares a function
+		if ... else		Marks a block of statements to be executed, depending on a condition
+		return			Exits a function
+		switch			Marks a block of statements to be executed, depending on different cases
+		throw			Throws (generates) an error
+		try				Implements error handling to a block of statements
+		var				Declares a variable
+		while			Marks a block of statements to be executed, while a condition is true
+
+
+JavaScript is Case Sensitive
+	JavaScript does not interpret VAR or Var as the keyword var.
+
+* It is common, in JavaScript, to use camelCase names, You will often see names written like lastName (instead of lastname).
+
+JavaScript Character Set
+	JavaScript uses the Unicode character set.
+	Unicode covers (almost) all the characters, punctuations, and symbols in the world.
+
+Semicolons ;
+	When separated by semicolons, multiple statements on one line are allowed:
+	eg : a = 5; b = 6; c = a + b;
+	You might see examples without semicolons, The Ending statements with semicolon is optional in JavaScript.
+
+JavaScript White Space
+	JavaScript ignores extra spaces. You can add white space to your script to make it more readable.
+		eg : var person = "Hege";
+		var person="Hege";
+
+JavaScript Code Blocks
+	JavaScript statements can be grouped together in blocks.
+	Blocks start with a left curly bracket, and end with a right curly bracket.
+	The purpose of a block is to make the sequence of statements execute together.
+	A good example of statements grouped together in blocks, are in JavaScript functions.
+	eg : 
+		function myFunction() {
+		    document.getElementById("demo").innerHTML = "Hello Dolly.";
+		    document.getElementById("myDIV").innerHTML = "How are you?";
+		}
+
+JavaScript Line Length and Line Breaks
+	For best readability, programmers often like to avoid lines longer than 80 characters.
+	If a JavaScript statement does not fit on one line, the best place to break it, is after an operator or a comma.
+	eg : 
+			document.getElementById("demo").innerHTML =
+    			"Hello Dolly.";
+
+JavaScript Line Break in a String
+	You can break up a code line within a text string with a backslash:
+		eg : 
+				document.getElementById("demo").innerHTML = "Hello \
+   					 Dolly!";
+   	However, you cannot break up a code line like this:
+   		eg :	document.getElementById("demo").innerHTML = \ 
+   					 "Hello Dolly!";
+
+Javascript Variable
+	JavaScript variables are containers for storing data values:
+
+	One Statement, Many Variables
+		You can declare many variables in one statement.
+		Start the statement with var and separate the variables by comma:
+			eg : var lastName = "Doe", age = 30, job = "carpenter";
+		Your declaration can also span multiple lines:
+			eg : 
+				var lastName = "Doe",
+				age = 30,
+				job = "carpenter";
+		In JavaScript you can always separate statements by semicolon, but then you cannot omit the var keyword.
+			Wrong:
+				var lastName = "Doe"; age = 30; job = "carpenter";
+			Right:
+				var lastName = "Doe"; var age = 30; var job = "carpenter";
+
+JavaScript Identifiers
+	All JavaScript variables (and JavaScript functions) must be identified with unique names.
+	These unique names are called identifiers.
+	Identifiers can be short names (like x and y), or more descriptive names (age, sum, totalVolume).
+	The general rules for constructing a names for variables (unique identifiers) are:
+		Names must begin with a letter
+		Names can also begin with $ and _ (but we will not use it)
+		Names can contain letters, digits, underscores, and dollar signs.
+		Names are case sensitive (y and Y are different variables)
+		Reserved words (like JavaScript keywords) cannot be used as names
+	Both JavaScript keywords and JavaScript identifiers are case-sensitive.
+
+JavaScript Data Types
+	String, Number, Boolean, Array, Object.
+	JavaScript has dynamic types. This means that the same variable can be used as different types
+	In JavaScript, an array is a special type of object. Therefore typeof [1,2,3,4] returns object. 
+
+The Concept of Data Types
+	In programming, data types is an important concept.
+	To be able to operate on variables, it is important to know something about the type.
+	Without data types, a computer can not safely solve this:
+		16 + "Volvo"
+	Does it make any sense to add "Volvo" to sixteen? Will it produce an error or a result?
+		"16Volvo"
+
+Undefined
+	In JavaScript, a variable without a value is undefined
+	eg : 
+		var person;  // Value is undefined, typeof is also undefined
+
+Empty Values
+	An empty value has nothing to do with undefined.
+	An empty string variable has both a value and a type.
+	eg : 
+		var car = "";    	// The value is "", the type is string
+
+Javascript Function
+	A JavaScript function is a block of code designed to perform a particular task.
+	A JavaScript function is executed when "something" invokes it (calls it)
+
+	Function Invocation
+		The code inside the function will execute when "something" invokes (calls) the function:
+			When an event occurs (when a user clicks a button)
+			When it is invoked (called) from JavaScript code
+			Automatically (self invoked)
+
+	Function Return
+		When JavaScript reaches a return statement, the function will stop executing.
+		If the function was invoked from a statement, JavaScript will "return" to execute the code after the invoking statement.
+		Functions often compute a return value. The return value is "returned" back to the "caller":
+
+	The () Operator Invokes the Function
+		Using the example above, toCelsius refers to the function object or return the function definition, and toCelcius() refers to the function result.
+		function toCelsius(fahrenheit) {
+				return (5/9) * (fahrenheit-32);
+		}
+		document.getElementById("demo").innerHTML = toCelsius; 
+
+Javascript Object
+	JavaScript objects are containers for named values, called properties and methods.
+		Javascript Object in Literal way
+			var details = {name : 'karthikeyana Siva',age:27}
+		Accessing Object properities
+			1) details['name'];
+			2) details.name
+
+Do Not Declare Strings, Numbers, and Booleans as Objects!
+	When a JavaScript variable is declared with the keyword "new", the variable is created as an object:
+		var x = new String();        // Declares x as a String object
+		var y = new Number();        // Declares y as a Number object
+		var z = new Boolean();       //	Declares z as a Boolean object
+	Avoid String, Number, and Boolean objects. They complicate your code and slow down execution speed
+
+
+JavaScript Scope
+	Scope is the set of variables you have access to.
+	In JavaScript, objects and functions, are also variables
+	In JavaScript, scope is the set of variables, objects, and functions you have access to
+	JavaScript has function scope: The scope changes inside functions
+		Local JavaScript Variables
+			Variables declared within a JavaScript function, become LOCAL to the function.
+			Local variables have local scope: They can only be accessed within the function.
+			Since local variables are only recognized inside their functions, variables with the same name can be used in different functions.
+			Local variables are created when a function starts, and deleted when the function is completed.
+
+		Global JavaScript Variables
+			A variable declared outside a function, becomes GLOBAL.
+			A global variable has global scope: All scripts and functions on a web page can access it. 
+
+		Automatically Global
+			If you assign a value to a variable that has not been declared, it will automatically become a GLOBAL variable.
+			This code example will declare carName as a global variable, even if it is executed inside a function.
+			Refer : http://www.w3schools.com/js/tryit.asp?filename=tryjs_local_global
+
+		The Lifetime of JavaScript Variables
+			The lifetime of a JavaScript variable starts when it is declared.
+			Local variables are deleted when the function is completed.
+			Global variables are deleted when you close the page
+
+		Function Arguments
+			Function arguments (parameters) work as local variables inside functions.
+
+		Global Variables in HTML
+			With JavaScript, the global scope is the complete JavaScript environment.
+			In HTML, the global scope is the window object: All global variables belong to the window object.
+
+* Your global variables, or functions, can overwrite window variables or functions. Anyone, including the window object, can overwrite your global variables or functions
+ 
+Javascript Evenets
+	HTML Events
+		An HTML event can be something the browser does, or something a user does.
+		Here are some examples of HTML events:
+			An HTML web page has finished loading
+			An HTML input field was changed
+			An HTML button was clicked
+		JavaScript lets you execute code when events are detected
+
+		Many different methods can be used to let JavaScript work with events:
+			HTML event attributes can execute JavaScript code directly
+			HTML event attributes can call JavaScript functions
+			You can assign your own event handler functions to HTML elements
+			You can prevent events from being sent or being handled
+
+
+Javascript Strings
+	JavaScript strings are used for storing and manipulating text.
+	Don't create strings as objects. They slow down execution speed, and produce nasty side effects:
+	String Properties
+		Property		Description
+		constructor		Returns the function that created the String object's prototype
+		length			Returns the length of a string
+		prototype		Allows you to add properties and methods to an object
+
+	String Methods
+		Method			Description
+		charAt()		Returns the character at the specified index (position)
+		charCodeAt()	Returns the Unicode of the character at the specified index
+		concat()		Joins two or more strings, and returns a copy of the joined strings
+		fromCharCode()	Converts Unicode values to characters
+		indexOf()		Returns the position of the first found occurrence of a specified value in a string
+		lastIndexOf()	Returns the position of the last found occurrence of a specified value in a string
+		localeCompare()	Compares two strings in the current locale
+		match()			Searches a string for a match against a regular expression, and returns the matches
+		replace()		Searches a string for a value and returns a new string with the value replaced
+		search()		Searches a string for a value and returns the position of the match
+		slice()			Extracts a part of a string and returns a new string
+		split()			Splits a string into an array of substrings
+		substr()		Extracts a part of a string from a start position through a number of characters
+		substring()		Extracts a part of a string between two specified positions
+		toLocaleLowerCase()	Converts a string to lowercase letters, according to the host's locale
+		toLocaleUpperCase()	Converts a string to uppercase letters, according to the host's locale
+		toLowerCase()	Converts a string to lowercase letters
+		toString()		Returns the value of a String object
+		toUpperCase()	Converts a string to uppercase letters
+		trim()			Removes whitespace from both ends of a string
+		valueOf()		Returns the primitive value of a String object
+
+		Search() and inexOf()
+			The two methods, indexOf() and search(), are equal.
+			They accept the same arguments (parameters), and they return the same value.
+			The two methods are equal, but the search() method can take much more powerful search values.
+			You will learn more about powerful search values in the chapter about regular expressions.
+
+		Extracting String Parts
+			slice(start, end) -- 
+			substring(start, end)
+			substr(start, length)
+
+		All string methods return a new string. They don't modify the original string.Formally said: Strings are immutable: Strings cannot be changed, only replaced.
+
+Javascript Numbers
+	* JavaScript has only one type of number.
+	* Numbers can be written with, or without, decimals
+	* JavaScript Numbers are Always 64-bit Floating Point
+	* Unlike many other programming languages, JavaScript does not define different types of numbers, like integers, short, 	long, floating-point etc
+	* Never write a number with a leading zero (like 07).Some JavaScript versions interpret numbers as octal if they are  		written with a leading zero.
+	* By default, Javascript displays numbers as base 10 decimals.
+	* But you can use the toString() method to output numbers as base 16 (hex), base 8 (octal), or base 2 (binary).
+		var myNumber = 128;
+		myNumber.toString(16);     // returns 80
+		myNumber.toString(8);      // returns 200
+		myNumber.toString(2);      // returns 10000000
+
+	Infinity
+		Infinity (or -Infinity) is the value JavaScript will return if you calculate a number outside the largest possible number
+		Division by 0 (zero) also generates Infinity:
+		Infinity is a number: typeOf Infinity returns number.
+			typeof Infinity;        // returns "number"
+	NaN -- Not a Number
+		NaN is a JavaScript reserved word indicating that a value is not a number.
+			var x = 100 / "Apple";  // x will be NaN (Not a Number)
+		var x = 100 / "Apple";  // x will be NaN (Not a Number)
+			var x = 100 / "10";     // x will be 10
+		The global JavaScript function isNaN() to find out if a value is a number.
+			var x = 100 / "Apple";
+			isNaN(x);   // returns true because x is Not a Number
+		Watch out for NaN. If you use NaN in a mathematical operation, the result will also be NaN.
+			var x = NaN;
+			var y = 5;
+			var z = x + y;         // z will be NaN
+		NaN is a number: typeOf NaN returns number.
+			typeof NaN;             // returns "number"
+		Numbers Can be Objects
+			Don't create Number objects. They slow down execution speed, and produce nasty side effects:
+
+		Number Properties
+		Property			Description
+		MAX_VALUE			Returns the largest number possible in JavaScript
+		MIN_VALUE			Returns the smallest number possible in JavaScript
+		NEGATIVE_INFINITY	Represents negative infinity (returned on overflow)
+		NaN					Represents a "Not-a-Number" value
+		POSITIVE_INFINITY	Represents infinity (returned on overflow)
+
+
+		Converting Variables to Numbers
+			There are 3 JavaScript functions that can be used to convert variables to numbers:
+				The Number() method-- can be used to convert JavaScript variables to numbers:
+					x = true;
+					Number(x);        // returns 1
+					x = false;     
+					Number(x);        // returns 0
+					x = new Date();
+					Number(x);        // returns 1404568027739
+					x = "10"
+					Number(x);        // returns 10
+					x = "10 20"
+					Number(x);        // returns NaN
+				The parseInt() method -- parseInt() parses a string and returns a whole number. Spaces are allowed. Only the first number is returned:
+					parseInt("10");         // returns 10
+					parseInt("10.33");      // returns 10
+					parseInt("10 20 30");   // returns 10
+					parseInt("10 years");   // returns 10
+					parseInt("years 10");   // returns NaN 
+					If the number cannot be converted, NaN (Not a Number) is returned.
+				The parseFloat() method -- parseFloat() parses a string and returns a number. Spaces are allowed. Only the first number is returned:
+					parseFloat("10");        // returns 10
+					parseFloat("10.33");     // returns 10.33
+					parseFloat("10 20 30");  // returns 10
+					parseFloat("10 years");  // returns 10
+					parseFloat("years 10");  // returns NaN
+			Number(),parseInt(),parseFloat()These methods are not number methods, but global JavaScript methods.
+	In JavaScript, all data types have a valueOf() and a toString() method.
+
+Javascript Math Object
+	The Math object allows you to perform mathematical tasks on numbers.
+	One common use of the Math object is to create a random number
+		Math.random();       // returns a random number
+	Math has no constructor. No methods have to create a Math object first.
+	Math.min() -- can be used to find the lowest value in a list of arguments
+		eg : Math.min(0, 150, 30, 20, -8);      // returns -8
+	Math.max() -- can be used to find the highest value in a list of arguments:
+		eg : Math.max(0, 150, 30, 20, -8);      // returns 150
+	Math.round() -- Math.round() rounds a number to the nearest integer:
+		eg : Math.round(4.7);            // returns 5
+			 Math.round(4.4);            // returns 4
+	Math.ceil() -- Math.ceil() rounds a number up to the nearest integer:
+		eg : Math.ceil(4.4);             // returns 5
+	Math.floor() -- Math.floor() rounds a number down to the nearest integer
+		eg : Math.floor(4.7);            // returns 4
+	Math.floor() and Math.random() can be used together to return a random number between 0 and 10:
+		Math.floor(Math.random() * 11);   // returns a random number between 0 and 10
+	JavaScript provides 8 mathematical constants that can be accessed with the Math object:
+		Math.E;         // returns Euler's number
+		Math.PI         // returns PI
+		Math.SQRT2      // returns the square root of 2
+		Math.SQRT1_2    // returns the square root of 1/2
+		Math.LN2        // returns the natural logarithm of 2
+		Math.LN10       // returns the natural logarithm of 10
+		Math.LOG2E      // returns base 2 logarithm of E
+		Math.LOG10E     // returns base 10 logarithm of E
+
+	Math Object Methods
+		Method				Description
+		abs(x)				Returns the absolute value of x
+		acos(x)				Returns the arccosine of x, in radians
+		asin(x)				Returns the arcsine of x, in radians
+		atan(x)				Returns the arctangent of x as a numeric value between -PI/2 and PI/2 radians
+		atan2(y,x)			Returns the arctangent of the quotient of its arguments
+		ceil(x)				Returns x, rounded upwards to the nearest integer
+		cos(x)				Returns the cosine of x (x is in radians)
+		exp(x)				Returns the value of Ex
+		floor(x)			Returns x, rounded downwards to the nearest integer
+		log(x)				Returns the natural logarithm (base E) of x
+		max(x,y,z,...,n)	Returns the number with the highest value
+		min(x,y,z,...,n)	Returns the number with the lowest value
+		pow(x,y)			Returns the value of x to the power of y
+		random()			Returns a random number between 0 and 1
+		round(x)			Rounds x to the nearest integer
+		sin(x)				Returns the sine of x (x is in radians)
+		sqrt(x)				Returns the square root of x
+		tan(x)				Returns the tangent of an angle
+
+Javascript Date Object
+	The Date object lets you work with dates (years, months, days, minutes, seconds, milliseconds)
+	Date objects are created with the new Date() constructor.
+	There are 4 ways of initiating a date:
+		new Date() -- Using new Date(), creates a new date object with the current date and time
+			eg : var d = new Date();
+		new Date(milliseconds) -- Using new Date(number), creates a new date object as zero time plus the number.
+			Zero time is 01 January 1970 00:00:00 UTC. The number is specified in milliseconds
+			eg: var d = new Date(86400000);
+			* JavaScript dates are calculated in milliseconds from 01 January, 1970 00:00:00 Universal Time (UTC).
+			One day contains 86,400,000 millisecond
+		new Date(dateString) -- Using new Date(date string), creates a new date object from the specified date and time
+			eg : var d = new Date("October 13, 2014 11:13:00");
+		new Date(year, month, day, hours, minutes, seconds, milliseconds)
+			Using new Date(7 numbers), creates a new date object with the specified date and time
+			The 7 numbers specify the year, month, day, hour, minute, second, and millisecond, in that order
+				var d = new Date(99,5,24,11,33,30,0);
+	JavaScript counts months from 0 to 11. January is 0. December is 11.
+
+	Date Methods
+		When a Date object is created, a number of methods allow you to operate on it
+		Date methods allow you to get and set the year, month, day, hour, minute, second, and millisecond of objects, using either local time or UTC (universal, or GMT) time
+			toString() and toUTCString() and toDateString()
+	Date objects are static, not dynamic. The computer time is ticking, but date objects, once created, are not.
+	
+
+	Date Get Methods
+	Get methods are used for getting a part of a date. Here are the most common (alphabetically):
+		Method			Description
+		getDate()		Get the day as a number (1-31)
+		getDay()		Get the weekday as a number (0-6)
+		getFullYear()	Get the four digit year (yyyy)
+		getHours()		Get the hour (0-23)
+		getMilliseconds()	Get the milliseconds (0-999)
+		getMinutes()	Get the minutes (0-59)
+		getMonth()		Get the month (0-11)
+		getSeconds()	Get the seconds (0-59)
+		getTime()		Get the time (milliseconds since January 1, 1970)
+
+	Date Set Methods
+	Set methods are used for setting a part of a date. Here are the most common (alphabitically):
+		Method			Description
+		setDate()		Set the day as a number (1-31)
+		setFullYear()	Set the year (optionally month and day yyyy.mm.dd)
+		setHours()		Set the hour (0-23)
+		setMilliseconds()	Set the milliseconds (0-999)
+		setMinutes()	Set the minutes (0-59)
+		setMonth()		Set the month (0-11)
+		setSeconds()	Set the seconds (0-59)
+		setTime()		Set the time (milliseconds since January 1, 1970)
+
+	If adding days, shifts the month or year, the changes are handled automatically by the Date object.
+
+	Date Input - Parsing Dates
+		If you have an input value (or any string), you can use the Date.parse() method to convert it to milliseconds.
+		Date.parse() returns the number of milliseconds between the date and January 1, 1970:
+		eg : var msec = Date.parse("March 21, 2012");
+
+
+Javascript Array
+	JavaScript arrays are used to store multiple values in a single variable.
+	An array is a special variable, which can hold more than one value at a time.
+
+	Creating an Array
+		Using an array literal is the easiest way to create a JavaScript Array.
+			eg : var cars = ["Saab", "Volvo", "BMW"];
+		Using the JavaScript Keyword new
+			eg : var cars = new Array("Saab", "Volvo", "BMW");
+		The two examples above do exactly the same. There is no need to use new Array(), For simplicity, readability and 		execution speed, use the first one (the array literal method).
+
+
+		* JavaScript variables can be objects. Arrays are special kinds of objects.
+		* Because of this, you can have variables of different types in the same Array.
+		* You can have objects in an Array. You can have functions in an Array. You can have arrays in an Array
+
+	Arrays are Objects
+		Arrays are a special type of objects. The typeof operator in JavaScript returns "object" for arrays.
+		But, JavaScript arrays are best described as arrays.
+
+		Associative Arrays?
+			Many programming languages support arrays with named indexes.
+			Arrays with named indexes are called associative arrays (or hashes).
+			JavaScript does not support arrays with named indexes.
+			In JavaScript, arrays use numbered indexes.  
+		The Difference Between Arrays and Objects?
+			* In JavaScript, arrays use numbered indexes.  
+			* In JavaScript, objects use named indexes.
+		Arrays are a special kind of objects, with numbered indexes.
+
+
+		When to Use Arrays? When to use Objects?
+			JavaScript does not support associative arrays.
+			You should use objects when you want the element names to be strings (text).
+			You should use arrays when you want the element names to be numbers.
+
+		Avoid new Array()
+			There is no need to use the JavaScript's built-in array constructor new Array().
+			Use [] instead
+			var points = new Array(40, 100, 1, 5, 25, 10)  // Bad
+			var points = [40, 100, 1, 5, 25, 10];          // Good
+
+		Converting Arrays to Strings
+			The valueOf() method is the default behavior for an array. It returns an array as a string:
+				var fruits = ["Banana", "Orange", "Apple", "Mango"];
+				fruits.valueOf();
+			For JavaScript arrays, valueOf() and toString() are equal.
+			The join() method also joins all array elements into a string
+				fruits.join(" * ");
+			The pop() method removes the last element from an array
+			The pop() method returns the string that was "popped out".
+				fruits.pop();
+			The push() method adds a new element to an array (at the end)
+			The push() method returns the new array length.
+				fruits.push("Kiwi");
+			Shifting Elements
+				Shifting is equivalent to popping, working on the first element instead of the last.
+				The shift() method removes the first element of an array, and "shifts" all other elements one place down.
+					fruits.shift();
+			The unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements
+				fruits.unshift("Lemon"); 
+			The shift() method returns the string that was "shifted out".
+			The unshift() method returns the new array length
+			Changing Elements
+				Array elements are accessed using their index number
+					fruits[0] = "Kiwi";
+				The length property provides an easy way to append a new element to an array:
+					fruits[fruits.length] = "Kiwi";   
+			Deleting Elements
+				Since JavaScript arrays are objects, elements can be deleted by using the JavaScript operator delete
+					delete fruits[0];
+				Using delete on array elements leaves undefined holes in the array. Use pop() or splice() instead.
+			Splicing an Array
+				The splice() method can be used to add new items to an array
+					fruits.splice(2, 0, "Lemon", "Kiwi");
+				The first parameter (2) defines the position where new elements should be added (spliced in).
+				The second parameter (0) defines how many elements should be removed.
+				The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be added.
+			Using splice() to Remove Elements
+				With clever parameter setting, you can use splice() to remove elements without leaving "holes" in the array
+					fruits.splice(0,1);   // Removes the first element of fruits
+				The first parameter (0) defines the position where new elements should be added (spliced in).
+				The second parameter (1) defines how many elements should be removed.
+				The rest of the parameters are omitted. No new elements will be added.
+			Sorting an Array
+				The sort() method sorts an array alphabetically
+					fruits.sort();            // Sorts the elements of fruits
+			Reversing an Array
+				The reverse() method reverses the elements in an array.
+				You can use it to sort an array in descending order:
+					fruits.sort();            // Sorts the elements of fruits 
+					fruits.reverse();         // Reverses the order of the elements
+				Numeric Sort
+					ref : http://www.w3schools.com/js/js_array_methods.asp
+			Joining Arrays
+				The concat() method creates a new array by concatenating two arrays
+					var myGirls = ["Cecilie", "Lone"];
+					var myBoys = ["Emil", "Tobias","Linus"];
+					var myChildren = myGirls.concat(myBoys);     // Concatenates (joins) myGirls and myBoys
+				The concat() method can take any number of array arguments:
+					var arr1 = ["Cecilie", "Lone"];
+					var arr2 = ["Emil", "Tobias","Linus"];
+					var arr3 = ["Robin", "Morgan"];
+					var myChildren = arr1.concat(arr2, arr3);     // Concatenates arr1 with arr2 and arr3
+			Slicing an Array
+				The slice() method slices out a piece of an array
+					eg : fruits.slice(1,3);
+
+Javascript Boolean
+	A JavaScript Boolean represents one of two values: true or false.
+	
+	Everything With a Real Value is True
+		100
+		3.14
+		-15
+		"Hello"
+		"false"
+		7 + 1 + 3.14
+		5 < 6
+
+	Everything Without a Real Value is False
+		var x = 0 or x = -0 or x = "" or x or x=null or x=false or x = 10 / "H"
+		The Boolean value of 0 (zero) is false:
+		The Boolean value of -0 (minus zero) is false:
+		The Boolean value of "" (empty string) is false
+		The Boolean value of undefined is false:
+		The Boolean value of null is false
+		The Boolean value of false is (you guessed it) false
+		The Boolean value of NaN is false:
+		Boolean(x);   // Return false  
+
+Javascript break Keyword
+	When the JavaScript code interpreter reaches a break keyword, it breaks out of the switch block.
+	This will stop the execution of more execution of code and/or case testing inside the block.
+
+	When a match is found, and the job is done, it's time for a break.There is no need for more testing
+
+
+JavaScript Break and Continue
+	The break statement "jumps out" of a loop.
+	The continue statement "jumps over" one iteration in the loop.
+
+	The Break Statement
+		You have already seen the break statement used in an earlier chapter of this tutorial. It was used to "jump out" of a switch() statement.
+		The break statement can also be used to jump out of a loop.  
+		The break statement breaks the loop and continues executing the code after the loop (if any):
+
+	The Continue Statement
+		The continue statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop
+
+	JavaScript Labels
+		To label JavaScript statements you precede the statements with a label name and a colon
+		The break and the continue statements are the only JavaScript statements that can "jump out of" a code block
+			eg : break labelname; 
+				 continue labelname;
+		The continue statement (with or without a label reference) can only be used inside a loop.
+		The break statement, without a label reference, can only be used inside a loop or a switch.
+		With a label reference, it can be used to "jump out of" any JavaScript code block:
+
+JavaScript typeof, null, and undefined
+		The typeof Operator
+			typeof "John"                // Returns string 
+			typeof 3.14                  // Returns number
+			typeof false                 // Returns boolean
+			typeof [1,2,3,4]             // Returns object
+			typeof {name:'John', age:34} // Returns object
+			In JavaScript, an array is a special type of object. Therefore typeof [1,2,3,4] returns object. 
+		Null
+			In JavaScript null is "nothing". It is supposed to be something that doesn't exist.
+			Unfortunately, in JavaScript, the data type of null is an object.
+
+			You can consider it a bug in JavaScript that typeof null is an object. It should be null.
+
+			You can empty an object by setting it to null:
+				var person = null;           // Value is null, but type is still an object
+			You can also empty an object by setting it to undefined
+				var person = undefined;     // Value is undefined, type is undefined
+		
+		Undefined
+			In JavaScript, undefined is a variable with no value.
+			The typeof a variable with no value is also undefined
+				var person;      // Value is undefined, type is undefined
+			Any variable can be emptied, by setting the value to undefined. The type will also be undefined
+				person = undefined;          // Value is undefined, type is undefined
+			Difference Between Undefined and Null
+				typeof undefined             // undefined
+				typeof null                  // object
+				null === undefined           // false
+				null == undefined            // true
+
+JavaScript Type Conversion
+	Number() converts to a Number, String() converts to a String, Boolean() converts to a Boolean
+	JavaScript Data Types
+		In JavaScript there are 5 different data types that can contain values:
+			string
+			number
+			boolean
+			object
+			function
+		There are 3 types of objects:
+			Object
+			Date
+			Array
+		And 2 data types that cannot contain values:
+			null
+			undefined
+
+	The typeof Operator
+		You can use the typeof operator to find the data type of a JavaScript variable
+
+		Please observe:
+			The data type of NaN is number
+			The data type of an array is object
+			The data type of a date is object
+			The data type of null is object
+			The data type of an undefined variable is undefined
+		You cannot use typeof to define if an object is an JavaScript Array or a JavaScript Date.
+
+	The constructor Property
+		The constructor property returns the constructor function for all JavaScript variables.
+			"John".constructor                 // Returns function String()  { [native code] }
+			(3.14).constructor                 // Returns function Number()  { [native code] }
+			false.constructor                  // Returns function Boolean() { [native code] }
+			[1,2,3,4].constructor              // Returns function Array()   { [native code] }
+			{name:'John', age:34}.constructor  // Returns function Object()  { [native code] }
+			new Date().constructor             // Returns function Date()    { [native code] }
+			function () {}.constructor         // Returns function Function(){ [native code] }
+		You can check the constructor property to find out if an object is an Array (contains the word "Array"):
+
+	JavaScript Type Conversion
+		JavaScript variables can be converted to a new variable and another data type:
+			By the use of a JavaScript function
+			Automatically by JavaScript itself
+
+	learn more type converstion : ref url -- http://www.w3schools.com/js/js_type_conversion.asp
+
+
+JavaScript Regular Expressions
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Browser Console--  https://developer.chrome.com/devtools/docs/commandline-api#profilename
+				   https://developer.chrome.com/devtools/docs/console-api
+	The Command Line API is a collection of functions for performing common tasks with the Chrome Developer Tools. These include convenience functions for selecting and inspecting elements in the DOM, stopping and starting the profiler, and monitoring DOM events. This API complements the Console API, the Command Line API is only available from within the console itself.
+
+	* $_  -- Returns the value of the most recently evaluated expression
+	* $0 - $4 -- Dev Tools remembers the last five DOM elements (or JavaScript heap objects) that you've selected in the tab (				or Profiles panel). It makes those objects available as $0, $1, $2, $3, and $4. $0 returns the most 					  recently selected element or JavaScript object, $1 returns the second most recently selected one, and so on
+	* $(selector)  --  Returns reference to the first DOM element with the specified CSS selector.This function is an alias 				   for document.querySelector() function.
+	* $$(selector) -- Returns an array of elements that match the given CSS selector. This command is equivalent to calling 				  document.querySelectorAll()
+	* $x(path) -- Returns an array of DOM elements that match the given XPath expression. For example, the following returns 			   all the <p> elements that contain <a> elements:
+					eg : $x("//p[a]")
+	* Clear() -- clear the console
+	* copy(object) -- Copies a string representation of the specified object to the clipboard.
+					eg : copy($0);
+	* debug(function) -- When the function specified is called, the debugger will be invoked and will break inside the 							 function on the Sources panel allowing you to be able to step through the code and debug it.
+					eg : debug(getData);

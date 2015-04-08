@@ -1,0 +1,79 @@
+API -- Application Processing Interface
+
+HTMML5 is much more of an application platform, not just a markup language
+
+We could tell the browser how to parse our document by choosing a document type. HTML 4 offered three options:
+	■ Transitional, which allowed for a mix of deprecated HTML 3.2 elements and HTML 4
+	■ Strict, which only allowed HTML 4 elements
+	■ Frameset, which allowed multiple documents to be embedded in one using the frame element
+
+The W3C stopped working on HTML 4 in 1998, instead choosing to focus its efforts on a replacement: XHTML
+
+XHTML 1.05 was created as "a reformulation of HTML 4 as an XML 1.0 application." XML,
+EXtensible Markup Language, was a web-friendly revision of SGML, offering stricter rules for writing and parsing markup
+
+XHTML
+	* XHTML, for example, required lower case tags while HTML allowed upper case tags, lower case tags, or a mix of the two. 
+	* XHTML required end tags for all nonempty elements such as p and li. Empty elements such as br and img had to be closed   with a />. 
+	* You had to quote all of your attributes, and escape your ampersands.
+	* All pages had to be served as application/xml+xhtml MIME type
+
+HTML5
+	* Both the Web Hypertext Application Technology Working Group (WHATWG) and the World Wide Web Consortium (W3C) publish HTML5 specifications
+	* The two groups worked together for years, creating a single specification managed by a single editor. However in 2011, they diverged. There are now two competing, though largely similar, versions of the specification. Each has its own editor.
+
+	Void Elements
+		<input name="firstname" disable />
+		<img src="" alt="" />
+		<hr />
+
+	* <!DOCTYPE html> is required. This is how the browser knows that we’re sending HTML5. Without it, there’s a risk of browsers parsing our document incorrectly. Why? Because of DOCTYPE switching
+	* DOCTYPE switching means that browsers parse and render a document differently based on the value of the <!DOCTYPE declaration, if it's served with a Contenttype: text/html response header. 
+	* Most browsers implemented some version of DOCTYPE switching in order to correctly render documents that relied on       nonstandard browser behavior, or outdated specifications
+
+	* HTML 4.01 and XHTML 1.0, for example, had multiple modes—strict, transitional, and frameset—that could be triggered with a DOCTYPE declaration, whereas HTML 4.01 used the following DOCTYPE for its strict mode
+		<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> 
+
+	* In quirks mode, each browser parses the document a little bit differently based on its own bugs and deviations from web standards
+
+	* using the HTML5 DOCTYPE (<!DOCTYPE html>) triggers standards mode, even for older browsers that lack HTML5 parsers
+
+	Make Sure You’re Using UTF-8
+		* Ideally, verify your text editor saves your documents with UTF-8 encoding "without BOM" and uses Unix/Linux line-endings.
+
+	The Two Modes of HTML5 Syntax
+		* HTML5 has two parsing modes or syntaxes: HTML and XML. The difference depends on whether the document is served with a Content-type: text/html header or a Content-type: application/xml+xhtml header.
+
+		If it’s served as text/html, the following rules apply
+			■ Start tags are not required for every element.
+			■ End tags are not required for every element.
+			■ Only void elements such as br, img, and link may be "self-closed" with />.
+			■ Tags and attributes are case-insensitive.
+			■ Attributes do not need to be quoted.
+			■ Some attributes may be empty (such as checked and disabled).
+			■ Special characters, or entities, do not have to be escaped.
+			■ The document must include an HTML5 DOCTYPE.
+
+	"XHTML5": HTML5’s XML Syntax
+		* HTML5 can also be written using a stricter, XML-like syntax.
+		* XHTML5 is best understood as HTML5 that’s written and parsed using the syntax rules of XML and served with a Content-type: application/xml+xhtml response header
+
+		The following rules apply to "XHTML5":
+			■ All elements must have a start tag.
+			■ Non-void elements with a start tag must have an end tag (p and li, for example).
+			■ Any element may be "self-closed" using />.
+			■ Tags and attributes are case sensitive, typically lowercase.
+			■ Attribute values must be enclosed in quotes.
+			■ Empty attributes are forbidden (checked must instead be checked="checked"
+			or checked="true").
+			■ Special characters must be escaped using character entities.
+
+			Our html start tag also needs an xmlns (XML name space) attribute.
+				<!DOCTYPE html>
+				  <html xmlns="http://www.w3.org/1999/xhtml">
+					<head>
+				Here we’ve added the XML name space with the xmlns attribute, to let the browser know that we’re using the stricter syntax.
+
+		Configuring Your Server
+				* In order for your web server or application to send the Content-type: application/xml+xhtml response header, * it must be configured to do so. If you’re using a web host, there’s a good chance your web host has done this already for files with an .xhtml extension. 
+				* Here you would just need to rename hi.html to hi.xhtml. If that doesn't work, consult your web server documentation.

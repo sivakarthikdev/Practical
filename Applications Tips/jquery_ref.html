@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JQuery Reference</title>
+		<style type="text/css">
+			.toggleclass{color:red;}
+			#form_block{width: 300px;padding: 10px;border: 1px solid #F00;margin: 10px;height: 250px;}
+		</style>
+	</head>
+	<body>
+		<div id="wrapper" class="wrapper_block">
+			<h1>Jquery Reference</h1>
+			<h2>Jquery Reference Tutorial</h2>
+			<span>Karthikeyan</span>
+			<span>siva</span>
+			<div id="form_block">
+				<form name="register" id="register" action="/register" method="get">
+					<button type="button" id="button2">jquery 1-9</button>
+					<button type="button" id="button1">jquery 1-5</button>
+					<input type="text" name="name" />
+					<input type="text" name="lastname" />
+					<input type="password" name="pwd" index=2/>
+					<input type="checkbox" id="check1" value="check1"/><input type="checkbox" value="check2" /><input type="checkbox" value="check3"/><input type="checkbox" value="check4"/>
+					<input type="file" name="file" multiple="multiple"/>
+					<select id="dropdown" multiple="multiple">
+						<option value="test1">Test 1</option>
+						<option value="test2">Test 2</option>
+						<option value="test3">Test 3</option>
+						<option value="test4">Test 4</option>
+					</select>
+					<input type="reset" name="clear" value="clear"/>
+					<input type="Submit" value="Submit" />
+				</form>
+			</div>
+			<div id="parent_block">
+				<div class="test">
+					<div>
+						<span class="parentlevel">Text</span>	
+						<button class="manipu" id="detach">Detach</button>	
+						<button class="manipu" id="remove">Remove</button>
+						<button class="manipu" id="clone">Clone</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="jquery-1.5.js"></script>
+		<script type="text/javascript">
+			var j1_5 = jQuery.noConflict();
+			j1_5(function(){
+				j1_5('#button1').live("click",function(){
+					alert('jQuery Version 1-5');
+				});
+			});
+			
+		</script>
+		<script type="text/javascript" src="jquery-1.9.1.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(document).on("click",":reset",function(){alert('data cleared !!')});
+				$('#button2').on("click",function(){
+						alert('jQuery Version 1-9');
+				});
+				$('.manipu').click(function(){
+					if($(this).attr('id')=="detach"){
+						var elede = $('#form_block').detach();
+						$('#parent_block').append(elede)
+					}else if($(this).attr('id')=="remove"){
+						var elede = $('#form_block').remove();
+						$('#parent_block').append(elede)
+					}
+					else{
+						var elede = $('#form_block').clone(false,false);
+						$('#parent_block').append(elede)
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

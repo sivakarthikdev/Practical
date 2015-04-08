@@ -1,0 +1,2 @@
+parseInt('345jhjh') ---> return 345
+parseInt('dfjh345') ---> return NaN

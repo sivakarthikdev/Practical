@@ -1,0 +1,107 @@
+<style type="text/css">
+		/** base carousel **/
+		#gallery_crousal_div ul {
+		    position:absolute;
+		    overflow:hidden;
+		    margin:0;
+		    padding:0;
+		    list-style:none;
+		}
+
+		.no-js #gallery_crousal_div ul {position:static;}
+
+		#gallery_crousal_div .mask {
+		    position:relative;
+		    overflow:hidden;
+		    
+		}
+
+		#gallery_crousal_div ul li {
+			float:left;
+			width:85px;
+		    height:60px;
+		    color:#fff;
+			/*font-size:8em;
+			text-align:center;
+			margin:0;*/
+		}
+
+	/*	.carousel .pagination-links {
+		    list-style:none;
+		    margin:0;
+		    padding:0;
+		}
+		 
+		.carousel .pagination-links li {
+		    display:inline;
+		}
+
+		.carousel .pagination-links li a {
+			padding:2px 6px;	
+		}
+
+		.carousel .pagination-links li a:hover {text-decoration:none;}
+
+		.carousel .pagination-links li.current a {
+			 background:#444;
+			 color:#fff;
+		}
+		 
+		.carousel .disabled {
+		    color:gray;
+		    cursor:default;
+		}
+		*/
+
+		/** my carousel 2 **/
+		#gallery_crousal_div .mask {
+			width:310px;
+			height:85px !important
+		}
+
+		#gallery_crousal_div ul li {
+			margin:0 28px 0 0;
+		}
+#gallery_crousal_div ul li img{
+	cursor:pointer;
+}
+		
+#gallery_crousal_div{
+	margin-left:99px;
+	margin-top: 20px;
+	width:422px;
+	text-align: center;
+}
+
+.prev_carousel{
+    float: left;
+    margin-right: 17px;
+    margin-top: 10px;
+}
+.next_carousel{
+	float: right;
+    left: -35px;
+    position: relative;
+    top: -74px;
+}	
+.disabled{color:#989898;}
+
+.gal_active{
+    opacity:1;
+  }
+  
+  .gal_hover{
+    opacity:0.5;
+  }
+
+ .gal_active_one{
+    opacity:1;
+  }
+ 
+#slides {position: relative;width: 660px;}
+.slides_container {top: 30px;width: 625px !important;float: left; margin-bottom: 50px;}
+.image_sec {font-size: 1.2em;padding: 12px 15px 7px 0;text-align: center;top: 15px;overflow: hidden;}
+#slides .prev {background: url("/images/prev.png") no-repeat scroll left 0 transparent;display: block;float: left;height: 40px;left: 80px;overflow: hidden;position: absolute;text-indent: -200px;top: 112px;width: 25px;z-index: 101;}
+#slides .next {background: url("/images/next.png") no-repeat scroll left 0 transparent;display: block;height: 40px;left: 527px;overflow: hidden;position: absolute;right: 21px;text-indent: -200px;top: 112px;width: 25px;z-index: 101;}
+#slides {position: relative; width: 660px;}
+

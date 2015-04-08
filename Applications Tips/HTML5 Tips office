@@ -1,0 +1,363 @@
+Web Storage
+	The two storages are session storage and local storage and they would be used to handle different situations.
+
+	The latest versions of pretty much every browser supports HTML5 Storage including Internet Explorer8.
+
+	It has a fairly simple API to retrieve/write data into the local storage. It can store upto 10MB of data per domain. Unlike cookies, the data stored are not included with every HTTP request.
+
+	Web pages can store data locally within the user's browser
+	Web Storage is more secure and faster
+	The data is not included with every server request
+	It is also possible to store large amounts of data, without affecting the website's performance
+
+	The data is stored in key/value pairs, and a web page can only access data stored by itself.
+
+	Internet Explorer 7 and earlier versions, do not support web storage.
+
+	types of storage
+		local storage and session storage
+
+			localStorage - stores data with no expiration date (we have to tell or do for clear data)
+			sessionStorage - stores data for one session (Clear browser session or close the browser)
+
+	Check browser support for localStorage and sessionStorage:
+		1)	if(typeof(Storage)!=="undefined"){
+			  // Yes! localStorage and sessionStorage support!
+			  // Some code.....
+	  		}
+			else{
+			  // Sorry! No web storage support..
+			}
+
+		2)	if ('localStorage' in window && window['localStorage'] !== null) {
+	                //use localStorage object to store data
+		    } else {
+		        alert('Cannot store user preferences as your browser do not support local storage');
+		    }
+
+	Most browsers seem to limit it to about 5 MB per web host
+
+	QUOTA_EXCEEDED_ERR exception will be thrown if the storage limit exceeds 5MB. So it is always better to add try/catch blocks to the storage code while saving data
+
+	The session object can store only strings, so any object stored will be typecast
+	to a string. This means an object will be stored as [object Object], which is probably
+	not what you want. To store an object or array, convert it to JSON first
+
+
+
+	Cookie
+		* HTML5 introduces two mechanisms, similar to HTTP session cookies, for storing structured data on the client side and to overcome following drawbacks.
+
+		* Cookies are included with every HTTP request, thereby slowing down your web application by transmitting the same data.
+
+		* Cookies are included with every HTTP request, thereby sending data unencrypted over the internet.
+
+		* Cookies are limited to about 4 KB of data . Not enough to store required data.
+
+	Local Storage
+		* The localStorage object stores the data with no expiration date.
+		* The data will not be deleted when the browser is closed, and will be available the next day, 	  week, or year.
+		* Stores data with no expiration date. The data will be available even when the browser/ browsing tab is closed or reopened
+
+		Tip: Key/value pairs are always stored as strings. Remember to convert them to another format when needed.
+
+	Session Storage
+		* The sessionStorage object is equal to the localStorage object, 
+		* Except that it stores the data for only one session. 
+		* The data is deleted when the user closes the browser window
+		* Stores data for one session. Data persisted will be cleared as soon as the user closes the browser.
+
+	Storage Events
+
+		Whenever a value in a storage object is changed, it fires a storage event. This event will
+		show the key, its old value, and its new value.
+
+		Storage events cannot be prevented
+		
+		When we set or remove data from the web storage, a storage event will be fired on the window object. We can add listeners to the event and handle the storage changes if required
+
+		window.addEventListener('storage', storageEventHandler, false);
+			function storageEventHandler(event) {
+			       // do codes here
+			}
+		The event object has the following attributes
+			key – the property that has changed
+			newValue – the newly set value
+			oldValue –  previously stored  value
+			url – the full url path from where the event originated
+			storageArea –  localStorage or sessionStorage object
+			
+	The same API methods are applicable for session storage as well except that the methods should be executed on the sessionStorage object
+
+
+Data-Attributes 
+	 Ref url : http://www.sitepoint.com/use-html5-data-attributes/
+
+	HTML5 introduces custom data attributes. You can use any lowercase name prefixed with data-, 
+	e.g.
+		<div id="msglist" data-user="bob" data-list-size="5" data-maxage="180"></div>
+
+		* are strings — you can store anything which can be string encoded, such as JSON. Type conversion must be handled in JavaScript.
+		* should only be used when no suitable HTML5 element or attribute exists.
+		* are private to the page. Unlike microformats, they should be ignored by external systems such as search engine indexing bots.
+		* The data attribute name must be at least one character long and must be prefixed with 'data-'. It should not contain any uppercase letters.
+
+		JavaScript Parsing #1: getAttribute and setAttribute
+		JavaScript Parsing #2: jQuery data() method
+		JavaScript Parsing #3: the dataset API
+			Finally, we have the HTML5 dataset API which returns a DOMStringMap object. You should note that data-attribute names are mapped by dropping the data- prefix, removing hyphens and converting to camelCase, e.g.
+
+				attribute name	dataset API name
+				data-user	user
+				data-maxage	maxage
+				data-list-size	listSize
+
+			The datalist API is supported by all modern browsers but not IE10 and below
+
+Form Validation
+	aria-describedby -- when blur on the input field the tips shown
+		 <input type="text" id="name" name="name" value="" aria-describedby="name-format">
+         <span id="name-format" class="help">Format: firstname lastname</span>
+     blur on the id="name" input field the text Format: firstname lastname will be shown
+
+     That each input field has an associated <label> tag. 
+     The for attribute for the label tag matches up with the id attribute of the associated input tag. 
+     This keeps our HTML semantic, with the labels helping to give meaning to the input controls. It also means that if you click the label, the associated input tag receives the focus
+
+     
+	There are also several validation based attributes you can use within your form. The following are some of the attributes that can be used to implement basic constraints:
+     pattern: 
+     	The pattern attribute is used to specify a regular expression and the field value must match this pattern. This attribute can be used with input types like text, password, email, url, tel and search.
+		For example, The following HTML snippet uses a pattern attribute for an input field.
+		<input type=”text” pattern=”[1-4]{5}” />
+
+	required: 
+		A required attribute indicates that a value must be specified for the input element.
+		<input type=”text” required />
+		The above snippet makes use of the required attribute. If you leave the field empty and try to submit therebye form, a validation error will occur.
+
+	maxlength: 
+		This is an integer value that specifies the maximum number of characters allowed for a particular input field.
+		<input type=”text” maxlength=”20” />
+		The above snippet adds an upper limit to the input field. The value entered in this input element must be less than 20 characters long.
+
+	min & max: 
+		As the names suggest, the min and max attributes specify the lower and upper limit respectively for an input element.
+		
+
+Video & Audio
+	3 support video formats and browser supports
+		MP4, WebM, and Ogg
+
+	Browser		MP4	  WebM	Ogg
+	IE			YES	   NO	NO
+	Chrome		YES	   YES	YES
+	Firefox		NO 	   YES	YES
+	Safari		YES	   NO	NO
+	Opera		NO	   YES	YES
+
+	MP4 = MPEG 4 files with H264 video codec and AAC audio codec
+	WebM = WebM files with VP8 video codec and Vorbis audio codec
+	Ogg = Ogg files with Theora video codec and Vorbis audio codec
+
+	MIME Types for Video Formats
+		MP4		video/mp4
+		WebM	video/webm
+		Ogg		video/ogg
+
+	<source> -- Defines multiple media resources for media elements, such as <video> and <audio>
+	<track > -- This element is used to specify subtitles, caption files or other files containing text, 			 that should be visible when the media is playing.
+
+	Methods:
+		canPlayType()-- This method checks if the browser can play the specified audio/video type.
+			The canPlayType() method can return one of the following values:
+
+			"probably" - the browser most likely supports this audio/video type
+			"maybe" - the browser might support this audio/video type
+			"" - (empty string) the browser does not support this audio/video type
+
+			type	Specifies the audio/video type (and optional codecs) to test support for.
+			Common values:
+				video/ogg
+				video/mp4
+				video/webm
+				audio/mpeg
+				audio/ogg
+				audio/mp4
+			Common values, including codecs:
+				video/ogg; codecs="theora, vorbis"
+				video/mp4; codecs="avc1.4D401E, mp4a.40.2"
+				video/webm; codecs="vp8.0, vorbis"
+				audio/ogg; codecs="vorbis"
+				audio/mp4; codecs="mp4a.40.5"
+			Note: This method can only return "probably" if codecs are included.
+
+			check browser support -->  	video.canPlayType('video/ogg; codecs="theora, vorbis"')
+
+		Load() --> The load() method re-loads the audio/video element.
+				   The load() method is used to update the audio/video element after changing the source or other settings
+				   		video.load();
+
+		Play() --> The play() method starts playing the current audio or video.
+		Pause() --> The pause() method halts (pauses) the currently playing audio or video.
+
+	Properties :
+		audioTracks -- > The audioTracks property returns a AudioTrackList object.
+						 The AudioTrackList object represents the available audio tracks for the audio/video.
+						 Each available audio track is represented by an AudioTrack Object.
+		
+		autoplay --> The autoplay property sets or returns if the audio/video should start playing as 				  soon as it is loaded.
+							myVid=document.getElementById("video1");
+							myVid.autoplay=true;
+							myVid.load();
+						Default Value = false;
+
+		buffered --> The buffered property returns a TimeRanges object.
+					 The TimeRanges object represents the user's buffered ranges of the audio/video.
+					 A buffered range is a time-range of buffered audio/video. The user gets several buffered ranges if he/she skips in the audio/video.
+
+					 TimeRanges Object Properties:
+						length - get the number of buffered ranges in the audio/video
+						start(index) - get the start position of a buffered range
+						end(index) - get the end position of a buffered range
+					Note: The first buffered range is index 0
+						myVid.buffered.start(0)
+						myVid.buffered.end(0)
+
+		controller --> The controller property returns the current media controller of the audio/video.
+					   By default the audio/video element does not have a media controller. If a media controller is specified, the controller property will return it as a MediaController object
+					   audio|video.controller || myVid.controller
+
+		controls --> The controls property sets or returns if the browser should display standard audio/			 video controls.
+					Standard audio/video controls should include:
+						* Play
+						* Pause
+						* Seeking
+						* Volume
+						* Fullscreen toggle (for video)
+						* Captions/Subtitles (when available)
+						* Track (when available)
+						get controls : 
+							audio|video.controls; --> return true | false(default)
+						set controls : 
+							audio|video.controls=true|false
+
+		currentsrc --> The currentSrc property returns the URL of the current audio/video.
+					   If no audio/video is set, an empty string is returned.
+					   	audio|video.currentSrc
+
+		currentTime --> The currentTime property sets or returns the current position (in seconds) of the 				  audio/video playback.
+						When setting this property, the playback will jump to the specified position.
+						set currenttime:
+							audio|video.currentTime="seconds"
+						get currenttime:
+							audio|video.currentTime
+						seconds --> Indicates the position for the playback of the audio/video, in seconds
+
+		defaultMuted--> The defaultMuted property sets or returns if the audio/video is muted by default.
+						Setting this property will only change the default muted state, not the current. To change the current muted state, use the muted property
+						The defaultMuted property is only supported in Chrome and Safari 6.
+						Set the defaultMuted property:
+							audio|video.defaultMuted=true|false (Default)
+						get the defaultMuted property:
+							audio|video.defaultMuted
+
+		defaultplaybackrate --> 
+			(slow motion)
+						The defaultPlaybackRate property sets or returns the default playback 	
+   						speed of the audio/video.
+						Setting this property will only change the default playback speed, not the current. To change the current playback speed,
+						The defaultPlaybackRate property is only supported in Internet Explorer 10, Firefox, and Chrome.
+
+						Set the defaultPlaybackRate property :
+							audio|video.defaultPlaybackRate=playbackspeed
+						get the defaultPlaybackRate property :
+							audio|video.defaultPlaybackRate
+						playbackspeed:
+							Indicates the default playback speed of the audio/video.
+							Example values:
+								1.0 is normal speed
+								0.5 is half speed (slower)
+								2.0 is double speed (faster)
+								-1.0 is backwards, normal speed
+
+		duration --> The duration property returns the length of the current audio/video, in seconds.
+					 If no audio/video is set, NaN (Not-a-Number) is returned	
+					 	audio|video.duration
+					 A Number, representing the length of the video, in seconds					
+
+		ended --> The ended property returns if the playback of the audio/video has ended.
+				  An audio/video has ended when the playback position is at the end of the audio/video.
+				  	audio|video.ended
+				  	Return --> Boolean, true|false. true if the playback has ended, otherwise false.
+		
+		error --> The error property returns a MediaError object.
+				  The MediaError object has a code property containing the error state of the audio/video
+				   audio|video.error.code
+				   Number	The code property of the MediaError Object returns a number representing the error state of the audio/video:
+					1 		 MEDIA_ERR_ABORTED - fetching process aborted by user
+					2 		 MEDIA_ERR_NETWORK - error occurred when downloading
+					3 		 MEDIA_ERR_DECODE - error occurred when decoding
+					4  		 MEDIA_ERR_SRC_NOT_SUPPORTED - audio/video not supported
+					
+		loop --> The loop property sets or returns if the audio/video should start playing over again when it is finished.
+				Set the loop property:
+					audio|video.loop=true|false
+				get the loop property:
+					audio|video.loop
+				true	Indicates that the audio/video should start playing again when it is finished
+				false	Default. Indicates that the audio/video should NOT start playing again when it is finished
+		
+		mediaGroup --> The mediaGroup property sets or returns the name of the media group the audio/video is a part of.
+					   A media group allow 2 or more audio/video elements to be kept synchronized. 
+							Eg :	myVid1=document.getElementById("video1");
+									myVid2=document.getElementById("video2");
+									myVid1.mediaGroup="test";
+									myVid2.mediaGroup="test";
+						Set the mediaGroup property:
+							audio|video.mediaGroup="group"
+						Get the mediaGroup property:
+							audio|video.mediaGroup
+						group --> Specifies the media group of the audio/video
+		
+		muted --> The muted property sets or returns if the audio/video should be muted (sound turned off).
+						Set the muted property:
+							audio|video.muted=true|false
+						Get the muted property:
+							audio|video.muted
+		
+		networkState --> The networkState property returns the current network state (activity) of the audio/video.
+						 audio|video.networkState
+						 Number	Represents the current network state of the audio/video element:
+							0 = NETWORK_EMPTY - audio/video has not yet been initialized
+							1 = NETWORK_IDLE - audio/video is active and has selected a resource, but is not using the network
+							2 = NETWORK_LOADING - browser is downloading data
+							3 = NETWORK_NO_SOURCE - no audio/video source found
+		
+		paused --> The paused property returns if the audio/video is paused.
+					audio|video.paused
+		
+		playbackRate --> The playbackRate property sets or returns the current playback speed of the audio/video.
+						 Set the playbackRate property:
+							audio|video.playbackRate=playbackspeed
+						 Get the playbackRate property:
+							audio|video.playbackRate
+							playback speed	Indicates the current playback speed of the audio/video.
+								Example values:
+									1.0 is normal speed
+									0.5 is half speed (slower)
+									2.0 is double speed (faster)
+									-1.0 is backwards, normal speed
+									-0.5 is backwards, half speed
+		
+		Played --> The played property returns a TimeRanges object.
+				   The TimeRanges object represents ranges of the audio/video that has already been played (seen) by the user.
+				   A played range is a time-range of played audio/video. The user gets several played ranges if he/she skips in the audio/video.
+						audio|video.played
+					TimeRanges Object	Represents the played parts of the audio/video.
+										TimeRanges Object Properties:
+											length - get the number of played ranges in the audio/video
+											start(index) - get the start position of a played range
+											end(index) - get the end position of a played range
+											Note: The first played range is index 0
+						

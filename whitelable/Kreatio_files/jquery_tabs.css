@@ -1,0 +1,16 @@
+.ui-tabs-nav { background:#000;   /*resets*/margin: 0; padding: 0; border: 0; outline: 0; line-height: 1.3; text-decoration: none; font-size: 100%; list-style: none;       float: left;    position: relative;    z-index: 1;    background: url("/images/grayline.jpg") repeat-x scroll left bottom transparent;    float: left;    padding-bottom: 1px; width:100%;background:#000; height:25px;}
+.ui-tabs-nav ul {    /*resets*/margin: 0; padding: 0; border: 0; outline: 0; line-height: 1.3; text-decoration: none; font-size: 100%; list-style: none;}
+.ui-tabs-nav li {    /*resets*/  border-right:1px solid #ccc; outline: 0; line-height: 1.3; text-decoration: none;list-style: none;    float: left;   /* background:url("/images/bg-grayline.png") repeat-x scroll center bottom #000; */   float: left;    font-size: 12px;    list-style-type: none;    padding: 0px 0 0px 0px;margin-right:0px;}
+.ui-tabs-nav li a {		border: 0 none;	color: #fff;	float:left;	font-size: 1em;	font-weight:normal;	line-height: 1.3;	list-style: none outside none;	margin: 0;	outline: 0 none;   padding: 4px 18px 6px 15px;	text-decoration: none;       }
+
+
+.ui-tabs-nav li.ui-tabs-active a {	background:#fff;	color: #000;	font-weight:normal;float:left;	}
+
+.ui-tabs-hide {   display: none;/* for accessible hiding: position: absolute; left: -99999999px*/} 
+.ui-tabs {    clear: both;    float: left;    margin-bottom:0px;    width: 100%;border-top:5px solid #5A97D2;}
+.ui-tabs-panel {}
+/*.tab_strip{display:block;}*/
+
+.ui-tabs-nav li.ui-tabs-selected a:hover {background:#fff;color: #000;} 
+.ui-tabs-nav li:last-child {border-right:none;}
+.ui-tabs-nav li a:hover {    background: none repeat scroll 0 0 #FFFFFF;    color: #000000;}

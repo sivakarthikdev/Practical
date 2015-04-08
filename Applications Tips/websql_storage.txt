@@ -1,0 +1,156 @@
+Application Cache
+	<html manifest="manifest.appcache">
+	chrome://appcache-internals/ --> View Entries of appcache in browser
+	
+Storage Option in HTML5
+	web storage API : local storage /session storage
+	web SQL Database
+	IndexDB
+	Application Cache
+	File APIs
+	cookies
+		
+		LOCAL STORAGE AND SESSION STORAGE
+			Localstorage --> window.localstorage
+				* Key/Value pair - hash table
+				* Persistent on page reloads
+				* Avoid HTTP overhead of cookies
+				* Great for storing user perferences
+				
+				Localstorage API
+					localStorage.setItem('key','value');
+					localStorage.getItem('key') //return value
+					localStorage.length // number of item stored
+					localStorage.key(0) //display item key based on index
+					localStorage.removeItem('key')
+					localStorage.clear() //clear all localstorae from browser
+					
+					scoped to an origin
+						http://exmple.com:80
+							http --> scheme
+							example.com --> domain
+							80 --> port
+			
+				Session Storage --> window.sessionStorage
+					* Same as localstorage
+					* lasts as long as browser is open
+					* opening page in new window or tab start new session
+					* when browser close all session stroage will be cleared
+					* Great for sensitive data (eg : banking session)	
+					
+				Webstorage API only store things
+					using native JSON
+						localStorage.setItem('details',JSON.stringify({name:'karthikeyan',age:28,place:'trichy'}));
+						var deta = JSON.parse(localStorage.getItem('details'))
+			
+			Browser Support --> Chrome,Safari,IE9,10,Opera
+			
+		WEB SQL DATABASE
+			* Client side SQL Database
+			* Asynchronous & synchronous * API
+			* Basically wrapper around SQlite
+			* Put Processing (Storing,Filtering,etc.) on client
+			
+			openDatabase()
+				var db = window.openDatabase(
+					'mydb',  // DB name
+					'1.0',	// Version
+					'Test DB', //Description
+					2*1024*1024, //Extimated size in bytes
+					function(db){
+									//Optional creation callbacks
+					}
+				)
+				
+				Size (required)
+					* Default : 5MB
+					* Prompted after that 5,10,50,100,etc
+				Versioning (required)
+					* Expected version  - Empty string means ay version is fine,
+					* Exception if version mismatch
+				Creation callbacks(optional)
+					* Called if database is brand new
+					* for updating verison and/or schema
+					db.changeVersion('','1.0',function(tx){
+					})
+			Transactions()
+				readTransaction
+					* read only operation
+					* db.readTransaction(function(tx){
+							//executeSql
+							},opt_errorCallback,opt_SuccessCalluback);
+				Transaction
+					* read/write operation
+					* locks the entire database
+					* db.transaction(function(tx){
+							//executeSql
+							},opt_errorCallback,opt_SuccessCallback);
+			executeSql()
+				tx.executeSql(sqlStatement,opt_arguments, opt_callback, opt_errorCb) --> create,Insert,delete
+			Browser Support --> Chrome,Safari,Opera
+			
+		
+		INDEXDB --> window.indexedDB
+			* Best of localstorage/sessionstroage and webSQlDB
+			* Object based Data stored
+			* In order retrieval by Index or locate by key
+			Asynchronous and synchrononus API
+				for the browser and for the webworker
+				
+			Creating an Object store()
+				var idb = indexedDB.open('FriendDB', 'my_friends');
+				idb.createObjectStore(
+					'Friends' , //name of new object store
+					'id' , // key path
+					true ) // auto increment?
+				*key path must be the name of an enumerated property of all object being stored in the object store
+				* DB versioning up to caller
+			
+			Stocking the store
+				var store = db.openObjectstore('Friends');
+				var user = store.put({
+					name :'karthik',
+					gender : 'male',
+					likes : 'jquery' });
+				console.log(user.id) //Expect 1
+				* Auto-increment keys get assigned automatically
+				* Schema flexible,store anything 
+			Finding things
+				Retriving by key( Indexes)
+					db.creatIndex(Indexname, keypath, unique?);
+					
+			Browser Support --> Chrome,Firefox
+		
+		APPLICATION CACHE
+			* caches entire web app locally
+			* why?
+				* HTML,CSS and JS stay fairly consistent,
+				* Native browser caching is unreliable
+				* caching resources	creates speedier apps
+					* Used by Iphone & Android Gmail app
+				* Decent mobile support
+				
+			cache manifest
+				<html manifest="example.manifest"> ..... </html>
+				
+				Javascript API
+					var cache = window.applicationCache
+				Debugging Appcache
+					about:appcache-internals
+				Browser Support --> Chrome,Safari,Firefox,Opera
+		FILE API's
+			* Reading and manipulationg
+				File/Blob,FileList,FileReader
+			* Creating and Writting
+				BlobBuilder,FileWritter,FileSaver,
+			* Directories and System
+				FileSystem
+			Browser Support --> Firefox,Chrome,Safari
+		
+		FILE SYSTEM API's
+			
+		Reference Website : html5rocks.com
+		
+				
+					
+			

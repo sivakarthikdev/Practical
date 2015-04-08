@@ -11,7 +11,8 @@
 	<section id="wrapper">
 	  <h1>Form Validation and Form Elements</h1>
 	  <form autocomplete="off" oninput="result.value=states.value" method="POST" id="mainForm">
-		<input type="text" name="fname" placeholder="Enter the name" required />
+		<input type="text" name="fname[]" placeholder="Enter the name" required />
+		<input type="text" name="fname[]" placeholder="Enter the name" required />
 		<input type="date" name="dob" id="dob" placeholder="select your date of birth" min="2000-12-31" max="2016-12-30" />
 		<input type="color" name="favcolor" placeholder="choose the color" />
 		<input type="number" name="age" placeholder="Enter the age" min="1" max="50" />

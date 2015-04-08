@@ -1,0 +1,36 @@
+
+/* Overlay */
+#contact-overlay {background-color:#000; cursor:wait;}
+
+/* Container */
+#contact-container {height:100%!important;/*left:152px;*/top:1%!important;width:960px !important;padding-top:10px;}
+#contact-container .holder {width:100%!important;/*float:none !important;background:none !important;*/padding:0 0 10px !important;/*height:90%!important;*/overflow:auto;}
+
+#contact-container #main_image{width:100%;height:auto !important;height:81%;}
+#contact-container #main_image .galleria_wrapper{/*height:90%!important;height:auto;*/text-align:center;}
+#contact-container #main_image .galleria_wrapper img{/*width:auto;height:auto;*/}
+#contact-container .image_control_holder{width:80% !important;font-size:1.3em;margin:5px 0px 0px 0px!important;}
+#contact-container .main_image_holder{ width: 100% !important;height:auto !important;}
+/*#contact-container .main_image_holder{ height: 0px!important;border: 0px solid #fff;}*/
+
+.modal-close{color:#000;font-size:1.5em;font-weight:bold;padding:20px;}
+#lightbox{height:100%!important;}
+#contact-container .image_control_holder{height:98%!important;width:100% !important;}
+#contact-container .list-holder{height:96%!important;overflow:hidden;}
+#contact-container .list-holder{/*width:19%!important;*/margin-left:10px !important;float:right!important;}
+#contact-container .list-holder li{width:150px!important;height:92px !important;margin: 0px 0px 10px 0px !important;}
+#contact-container .list-holder li img{width:150px!important;height:92px !important;margin: 0px 0px 10px 0px !important;}
+#contact-container .zoomed{display:none;}
+.hiden{display:none;}
+samplemodal-wrap{height:auto !important;}
+
+#contact-container .holder_bottom_left{width:97%;padding:0px 0px 0px 15px;}
+#contact-container .list-holder{width:170px !important;margin-top:5px;}
+#contact-container .holder_bottom_left{padding-bottom:0px !important;}
+
+#contact-container .bottom_navigation{width:27% !important;}
+
+#contact-container {background-color:#DEDEDE;}
+
+#contact-container .jcarousel-skin-tango .jcarousel-container-horizontal {width:452px;}
+#contact-container .jcarousel-skin-tango .jcarousel-clip-horizontal {width:440px;}

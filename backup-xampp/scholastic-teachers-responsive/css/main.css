@@ -1,0 +1,14 @@
+body{background:#eee;}
+#universal4o{float:left;width:100%;}
+button.btn-responsive-nav{display:none;}
+#wrapper{width:80%;margin:0px auto;}
+#universal{width:100%;float:left;}
+#universal .scholastic_home{float:left;width:20%;margin-top: 14px;}
+#nav-menus{float:left;width:80%;}
+#nav-menus ul{float:left;width:100%;padding-left:0px;margin-top: 0px;}
+#nav-menus ul li{float:left;margin:5px;list-style:none;line-height:20px;}
+#nav-menus ul li a{text-decoration:none;line-height:20px;position: relative;display: block;padding: 10px 10px;color:#186D24}
+#nav-menus ul li a:hover{text-decoration:none;line-height:20px;background:#dd1c17;color:#fff;border-radius: 4px;font-style: normal;}
+#container{float:left;width:100%}
+#teacher-channel{width:100%;float:left;}
+#teacher-channel>div{width:30%;float:left;} 

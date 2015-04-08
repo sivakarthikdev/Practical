@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Html5 Form Attributes</title>
+		<style>
+		.formblock{float:left;margin:10px;padding: 10px;}
+		fieldset{border:2px solid #445678;border-radius: 3px;}
+		input:focus:invalid{border:3px solid #789657;}
+		input:required:valid{border:1px solid green;color:#898989;}
+		</style>
+	</head>
+	<body>
+		<div id="wrapper"> 
+			<div class="formblock">
+				<fieldset>
+				<legend>Form block 1</legend>
+				<form id="registerform" autocomplete="on" action="register">
+					<input type="text" id="firstname" name="firstname" autofocus required title="firstname"/> <br />
+					<input list="browsers" name="list"><br />
+					<input type="text" id="lastname" name="lastname" required title="lastname"/> <br />
+					<input type="submit" value="submit"/>
+					<input type="submit" value="Submit as backend" formtarget="_blank" formmethod="get" formaction="admin_register">
+					<input type="reset" value="clear" />
+				</form>
+				</fieldset>
+			</div>
+			<div class="formblock">
+				<fieldset>
+				<legend>Form block 2</legend>
+				<form id="registerform1" action="register1">
+					<input type="email" id="email" name="email" required title="enter email"/> <br />
+					<input list="browsers" name="list"><br />
+					<input type="file" name="files" multiple><br />
+					<input type="submit" value="submit"/>
+					<input type="reset" value="clear" />
+				</form>
+				</fieldset>
+			</div>
+			<div class="formblock">
+				<fieldset>
+					<legend>Form block 3</legend>
+					<input type="text" name="age" form="registerform1"><br />
+					<input type="number" name="number" step="10" form="registerform">
+				</fieldset>
+			</div>
+			<datalist id="browsers">
+			  <option value="Internet Explorer">
+			  <option value="Firefox">
+			  <option value="Chrome">
+			  <option value="Opera">
+			  <option value="Safari">
+			</datalist>
+		</div>
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	</body>
+</html>

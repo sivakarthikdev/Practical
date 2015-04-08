@@ -3,11 +3,24 @@
   <head>
     <title>HTML5 Storage(Local & Session)</title>
 	<meta charset="utf-8" />
+	<script>
+		var details = [{name: "Karthikeyan", age: 28, place: "trichy"}, {name: "Kumar", age: 28, place: "salem"}, {name: "Arun", age: 25, place: "Karur"}];
+	</script>
   </head>
   <body>
 	<section id="wrapper">
 	  <h1>Local Storage</h1>
+	  <p id="DetailsName"></p>
 	</section>
 	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-  </body>
+	<script>
+		var addData = "";
+		localStorage.setItem('Pdetails',JSON.stringify(details));
+		var detName = JSON.parse(localStorage.getItem('Pdetails'));
+		$.each(detName,function(i,val) {
+			addData += '<span>' + detName[i].name + ' ' + detName[i].age +'</span><br \>';
+		}); 
+		$('#DetailsName').html(addData);
+	</script>
+   </body>
 </html>

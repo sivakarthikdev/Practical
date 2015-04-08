@@ -1,0 +1,19 @@
+Jascript String
+secondname
+"karthikeyan"
+secondname.charAt(2)
+"r"
+secondname.charAt(0)
+"k"
+secondname.charAt('a')
+"k"
+secondname.charAt('b')
+"k"
+secondname.charAt('c')
+"k"
+secondname.charAt(#)
+VM66:762 Uncaught SyntaxError: Unexpected token ILLEGAL
+secondname.charAt(7)
+"e"
+secondname.charAt(17)
+""

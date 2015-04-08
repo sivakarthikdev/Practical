@@ -1,0 +1,154 @@
+/* Copyright: Guillermo Rauch <http://devthought.com/> - Distributed under MIT - Keep this message! */
+
+/* TextboxList sample CSS */
+ul.holder { margin: 0; border: 1px solid #999; overflow: hidden; height: auto !important; height: 1%; padding: 4px 5px 0; }
+*:first-child+html ul.holder { padding-bottom: 2px; } * html ul.holder { padding-bottom: 2px; } /* ie7 and below */
+ul.holder li { float: left; list-style-type: none; margin: 0 5px 4px 0; white-space:nowrap;}
+ul.holder li.bit-box, ul.holder li.bit-input input { font: 11px "Lucida Grande", "Verdana"; }
+ul.holder li.bit-box { -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px; border: 1px solid #CAD8F3; background: #DEE7F8; padding: 1px 5px 2px; }
+ul.holder li.bit-box-focus { border-color: #598BEC; background: #598BEC; color: #fff; }
+ul.holder li.bit-input input { width: auto; overflow:visible; margin: 0; border: 0px; outline: 0; padding: 3px 0px 2px; } /* no left/right padding here please */
+ul.holder li.bit-input input.smallinput { width: 20px; }
+
+/* Facebook demo CSS */      
+ul.holder { width: 500px; }
+ul.holder { margin: 0 !important }
+ul.holder li.bit-box, #apple-list ul.holder li.bit-box { padding-right: 15px; position: relative; z-index:1000;}
+#apple-list ul.holder li.bit-input { margin: 0; }
+#apple-list ul.holder li.bit-input input.smallinput { width: 5px; }
+ul.holder li.bit-hover { background: #BBCEF1; border: 1px solid #6D95E0; }
+ul.holder li.bit-box-focus { border-color: #598BEC; background: #598BEC; color: #fff; }
+ul.holder li.bit-box a.closebutton { position: absolute; right: 4px; top: 5px; display: block; width: 7px; height: 7px; font-size: 1px; background: url('close.gif'); }
+ul.holder li.bit-box a.closebutton:hover { background-position: 7px; }
+ul.holder li.bit-box-focus a.closebutton, ul.holder li.bit-box-focus a.closebutton:hover { background-position: bottom; }
+
+/* Autocompleter */
+
+.facebook-auto { display: none; position: absolute; width: 512px; background: #eee; z-index:1001;}
+.facebook-auto .default { padding: 5px 7px; border: 1px solid #ccc; border-width: 0 1px 1px;font-family:"Lucida Grande","Verdana"; font-size:11px; }
+.facebook-auto ul { display: none; margin: 0; padding: 0; overflow: auto; position:absolute; z-index:9999}
+.facebook-auto ul li { padding: 5px 12px; z-index: 1000; cursor: pointer; margin: 0; list-style-type: none; border: 1px solid #ccc; border-width: 0 1px 1px; font: 11px "Lucida Grande", "Verdana"; background-color: #eee }
+.facebook-auto ul li em { font-weight: bold; font-style: normal; background: #ccc; }
+.facebook-auto ul li.auto-focus { background: #4173CC; color: #fff; }
+.facebook-auto ul li.auto-focus em { background: none; }
+.deleted { background-color:#4173CC !important; color:#ffffff !important;}
+.hidden { display:none;}
+
+#demo ul.holder li.bit-input input { padding: 2px 0 1px; border: 1px solid #999; }
+.ie6fix {height:1px;width:1px; position:absolute;top:0px;left:0px;z-index:1;}
+
+/* Copyright: Guillermo Rauch <http://devthought.com/> - Distributed under MIT - Keep this message! */
+
+/* TextboxList sample CSS */
+ul.holder { margin: 0; border: 1px solid #999; overflow: hidden; height: auto !important; height: 1%; padding: 4px 5px 0; }
+*:first-child+html ul.holder { padding-bottom: 2px; } * html ul.holder { padding-bottom: 2px; } /* ie7 and below */
+ul.holder li { float: left; list-style-type: none; margin: 0 5px 4px 0; white-space:nowrap;}
+ul.holder li.bit-box, ul.holder li.bit-input input { font: 11px "Lucida Grande", "Verdana"; }
+ul.holder li.bit-box { -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px; border: 1px solid #CAD8F3; background: #DEE7F8; padding: 1px 5px 2px; }
+ul.holder li.bit-box-focus { border-color: #598BEC; background: #598BEC; color: #fff; }
+ul.holder li.bit-input input { width: auto; overflow:visible; margin: 0; border: 0px; outline: 0; padding: 3px 0px 2px; } /* no left/right padding here please */
+ul.holder li.bit-input input.smallinput { width: 20px; }
+
+/* Facebook demo CSS */      
+ul.holder { width: 500px; }
+ul.holder { margin: 0 !important; width: 355px !important; }
+ul.holder li.bit-box, #apple-list ul.holder li.bit-box { padding-right: 15px; position: relative; z-index:1000;}
+#apple-list ul.holder li.bit-input { margin: 0; }
+#apple-list ul.holder li.bit-input input.smallinput { width: 5px; }
+ul.holder li.bit-hover { background: #BBCEF1; border: 1px solid #6D95E0; }
+ul.holder li.bit-box-focus { border-color: #598BEC; background: #598BEC; color: #fff; }
+ul.holder li.bit-box a.closebutton { position: absolute; right: 4px; top: 5px; display: block; width: 7px; height: 7px; font-size: 1px; background: url('/images/close.gif'); }
+ul.holder li.bit-box a.closebutton:hover { background-position: 7px; }
+ul.holder li.bit-box-focus a.closebutton, ul.holder li.bit-box-focus a.closebutton:hover { background-position: bottom; }
+
+/* Autocompleter */
+
+.facebook-auto { display: none; position: absolute; width: 297px; background: #eee; z-index:1001;}
+.facebook-auto .default { padding: 5px 7px; border: 1px solid #ccc; border-width: 0 1px 1px;font-family:"Lucida Grande","Verdana"; font-size:11px; }
+.facebook-auto ul { display: none; margin: 0; padding: 0; overflow: auto; position:absolute; z-index:9999}
+.facebook-auto ul li { padding: 5px 12px; z-index: 1000; cursor: pointer; margin: 0; list-style-type: none; border: 1px solid #ccc; border-width: 0 1px 1px; font: 11px "Lucida Grande", "Verdana"; background-color: #eee }
+.facebook-auto ul li em { font-weight: bold; font-style: normal; background: #ccc; }
+.facebook-auto ul li.auto-focus { background: #4173CC; color: #fff; }
+.facebook-auto ul li.auto-focus em { background: none; }
+.deleted { background-color:#4173CC !important; color:#ffffff !important;}
+.hidden { display:none;}
+
+#demo ul.holder li.bit-input input { padding: 2px 0 1px; border: 1px solid #999; }
+.ie6fix {height:1px;width:1px; position:absolute;top:0px;left:0px;z-index:1;}
+
+.title_display{
+  background: none repeat scroll 0 0 #FFFACD;
+    color: red;
+    display: none;
+    font-weight: bold;
+    height: 16px;
+    position: relative;
+    width: auto;
+    border:2px solid #B22222;
+  
+}
+
+.article_source_section_new{float:left;margin-left: 65px;margin-bottom: 10px;}
+.article_source_new{float:left;   margin-right: 20px;
+    }
+.article_section_new{float:left;}
+.article_source_new label{float:left;width:90px;text-align: right;}
+.article_source_new ul {
+   border: 1px solid #92B2D6 !important;
+    float: left;
+    height: 50px !important;
+    padding: 0 !important;
+    width: 225px !important;}
+ .article_source_new ul li { background-color: #FFFFFF !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;}
+.tags_authors_new{ clear: both;	float: left;margin-left:65px; margin-bottom: 10px;}
+.article_author_new{float:left;}
+.article_tags_new{float:left;margin-right: 20px;}
+.article_primary_medium_new{float:left;clear:both;margin-left:65px; margin-bottom: 10px;}
+.article_pbl_exp{float:left;clear:both;margin-left:65px;}
+.article_add_new_button{float:left;clear:both;  margin-top: 10px;
+    width: 55%;}
+.article_section_new label{float:left;width:90px;text-align: right;}
+.article_section_new ul {float:left;  width: 225px !important;height:50px !important;padding:0px !important;border:1px solid #92B2D6 !important;}
+.article_section_new ul li {padding:0px !important;background-color: #FFFFFF !important; margin: 0 !important;
+    width: 100% !important;  width: 100% !important;}
+.article_tags_new label{float:left;width:90px;text-align: right;}
+.article_tags_new ul {border: 1px solid #92B2D6 !important;
+    float: left;
+    height: 50px !important;
+    padding: 0 !important;
+    width: 225px !important;	}
+.article_tags_new ul li {padding:0px !important;background-color: #FFFFFF !important; margin: 0 !important;width: 100% !important;  width: 100% !important;}
+.article_author_new label {float:left;width:90px;text-align: right;}
+.article_author_new ul {float:left;  width: 225px !important;height:50px !important;padding:0px !important;border:1px solid #92B2D6 !important;}
+.article_author_new ul li  {padding:0px !important;background-color: #FFFFFF !important; margin: 0 !important;width: 100% !important;  width: 100% !important;}
+.article_primary_medium_new label{float:left;width:90px;}
+.article_primary_medium_new ul {float:left;  width: 225px !important;height:50px !important;padding:0px !important;border:1px solid #92B2D6 !important;} 
+.article_primary_medium_new ul li  {padding:0px !important;background-color: #FFFFFF !important; margin: 0 !important;
+    width: 100% !important;  width: 100% !important;}
+.article_pbl_exp label {float:left; width: 90px;text-align: right;}
+.article_pbl_exp input {float:left;}
+.article_pbl_exp img{float:left;}
+.article_ppl {float:left;margin-right: 70px;}
+.article_exp {float:left;}
+.article_ppl img{padding-left:5px;}
+.article_exp img{padding-left:5px;}
+
+ .article_add_new_button a {background: url("/images/new_button/button_right_bg.jpg") no-repeat scroll right center transparent;
+    border: medium none;
+    color: #FFFFFF;
+    font-size: 1em;
+    font-weight: bold;
+    margin-left: 3px;
+    padding: 7px 10px 7px 4px;}
+    
+.article_advanced_search{    background-color: #EEF1E8;
+    float: left;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    padding-left: 5px;
+    width: 100%;
+    padding-top: 15px;  
+}

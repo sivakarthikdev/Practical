@@ -1,0 +1,79 @@
+
+/* new styles for DIRECTORY pages */
+
+/* style for Breadcrumbs */
+.navigation_menu {background: url("/images/home_icon.jpg") no-repeat scroll 0 5% transparent;clear: both;float: left;overflow: hidden;padding: 0px 0 10px 20px;width:96.8%;}
+.navigation_menu img {padding: 4px 0 2px;}
+/* End of Breadcrumbs style */
+
+/* style for Directory search block */
+.refine_first {padding-left: 23px;width: 270px;float:left;padding-top: 10px;}
+.span{color: #000000;font-weight: bold;padding-bottom:3px;font-size: 1.2em;display:block;}
+.refine_first_left {padding-bottom:25px;padding-right:10px;}
+select{border-color: #ABADB3 #E3E9EF #E3E9EF;border-style: solid;border-width: 1px;color: #333333;font-size: 12px;height: 22px;width: 218px;}
+.sub_button{float:left;width:100%;float:right;}
+.sub_button .button_style{float:right;margin-right: 25px;}
+/* End of Directory search block style */
+
+/* style for Browse by category block */
+h4{font-size: 1.5em;font-weight: bold;padding-bottom: 5px;}
+h4 a {color: #A2570E;}
+p span {color: #000000;font-size: 1em;font-weight: normal;padding-bottom: 3px;text-align:center;}
+.category_list{border-bottom:1px dotted #DBDBDB;padding-bottom:10px;padding-top:10px;float:left;padding-left:10px;padding-right:10px;width:96.5%;}
+.dir_image {float: right;padding-left: 10px;width: 120px;}
+/* End of Browse by category block style */
+
+/* style for categories block */
+.section_list{background:#F0F0F0;/*border-bottom:1px solid #DBDBDB;*/}
+.category_list ul li{list-style:none;font-size:1.2em;}
+h2 p{font-size:1em;}
+.dir_image2{width:80px;}
+label{font-size:1.2em;}
+/* style for search results block */
+.category_list .page_display_bar_left{float:left;width:auto;}
+.category_list .page_display_bar_left p{float:left;}
+.search_page_number a{padding-left: 5px;font-size:1.2em;}
+.category_list .page_display_bar_right{float:right;}
+.category_list .page_display_bar_right select{width:58px;}
+.simple_list{padding-top:10px;}
+/* End of search results block style */
+
+/* style for search results with pagination block */
+.search_page_number {float: left;padding-top:2px;}
+.span.current {color: #333333;float:left;font-weight:normal;padding-left: 5px;}
+.search_list_pagination_left span {color: #333333;padding: 0 0 0 5px;}
+.prev_page {    padding-left: 10px !important;float:left;font-weight:normal;}
+/* End of search results with pagination block style */
+
+/* style for No-results page Suggestion block */
+.result_note{float:left;width:100%;}
+.result_note p{width:100%;padding-bottom:5px;}
+.result_note p span{font-weight:bold;display: inline-block;}
+.simple_list p{padding-bottom:7px;}
+/* End of  No-results page Suggestion block style */
+
+/* style for Social media links block */
+.social_links{background:#F0F0F0;border: 1px solid #DBDBDB;}
+.social_links ul{float:right;}
+.social_links ul li{float:left;}
+.social_links ul li a {border-right: 1px solid #CCCCCC;padding: 0 6px 0 26px;margin-right: 5px;}
+.email_to_friends {background: url("/images/email_a_colleague.gif") no-repeat scroll 4% 22% transparent;}
+.artilce_print {background: url("/images/print.gif") no-repeat scroll 8% 22% transparent;}
+/* End of Social media links block style */
+
+/* styles for view individual page */
+.common_rgt_txt {float:left;width:300px;}
+.common_rgt_txt p { color: #000000;    float: left;    font-size: 1.2em;    padding-bottom:12px;    width: 100%;}
+.common_rgt_txt span {color: #333;float: left;font-weight: bold;line-height: 17px;padding-right: 5px;text-align: left;width: auto;}
+.rgt_text_style {color:#054A6C !important;font-weight: normal !important;}
+/* End of View individual page style */
+
+/*Questionary error*/
+#errorExplanation {background: none repeat scroll 0 0 #F0F0F0;border: 2px solid #5A97D2;clear: both;font-family: arial;margin: 10px 0;padding-bottom: 1.2em;width: 100%;}
+.errorExplanation ul li{list-style-type:none;font-size:12px;padding:3px;color: #CC0000;}
+.errorExplanation ul{margin:10px 0px 0px 10px;}
+.advertise_loginFields{margin:10px 0px;}
+.advertise_loginFields div{margin-top:5px;}
+#errorExplanation h3 {background: none repeat scroll 0 0 #000000;color: #FFFFFF;font-size: 1.2em;font-weight: bold;padding: 5px 5px 5px 10px;text-align: left;border-top:5px solid #5A97D2;}
+.advertsie_adminButton {background: url("/images/butt_lft_img.jpg") no-repeat scroll left top transparent;float: left;margin-top: 10px;padding-left: 10px;}
+.advertsie_adminButton input {background: url("/images/butt_rgt_img.jpg") no-repeat scroll right top transparent;border: medium none;color: #054A6C;float: left;font-family: arial;font-size: 1.2em;font-weight: bold;padding: 5px 13px 7px 4px;}

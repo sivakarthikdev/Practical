@@ -1,0 +1,219 @@
+Doctype 
+	It’s used to tell validators and editors what tags and attributes you can use and how the document should be formed.
+	It’s also used by a lot of web browsers to determine how the browser will render the page.
+	A valid doctype often causes browsers to render pages sin “standards mode.”
+	We want to use HTML5’s new elements, and that means we need to let browsers and validators know about the tags we’ll be using
+
+	Different Types : Strict,Transitional,Frameset
+		html & xhtml 
+
+Why use XHTML structure
+	Most web servers serve HTML pages with the text/html MIME type because of Internet Explorer’s inability to properly handle the application/xml+xhtml MIME type associated with XHTML pages. 
+	Because of this, browsers tend to strip off self-closing tags because self-closing tags were not considered valid HTML before HTML5. For example, if you had a self-closing script tag above a div like this:
+	<script language="javascript" src="application.js" /></script>
+	<h2>Help</h2>
+	the browser would remove the self-closing forward slash, and then the renderer would think that the h2 was within the script tag, which never closes! This is why you see script tags coded with an explicit closing tag, even though a self-closing tag is vali d XHTML markup.
+	So, be aware of possible issues like this if you do use selfclosing tags in your HTML5 documents, because they will be served with the text/html MIME type. You can learn more about this issue and others at http://www.webdevout.net/articles/beware-of-xhtml#myths.s
+
+HTML5 Elements
+	article,
+	section,
+	header,
+	footer,
+	aside,
+	nav,
+	meter and Progressbar
+
+	Form Contorls or New elements
+		Email field - Opera,IOS
+		URL field - Opera,IOS
+		Telephone Field - Opera,IOS
+		Search filed - Chrome,Opera,IOS
+		range - Chrome,Opera,IOS
+		date - Chrome,Opera,IOS
+		datetime- Chrome,Opera,IOS
+		color
+		autofocus
+		contenteditable
+
+		datetime--with time zone
+		datetime-local -- without time zones
+
+		HTML5 new Input types
+			Email,Url,Color,Search,date,datetime,datetime-local,month,number,range,Tel,time,week
+
+	Html5 Modernizer
+
+	CSS3 nth-child selector
+		selector:nth-of-type(even){
+
+		}
+		selector:nth-of-type(odd){
+		
+		}
+		selector:nth-of-type(n){
+		
+		}
+		selector:nth-last-child(n){
+		
+		}
+
+		a:after{
+			content : " ("attr(href)") "
+		}
+
+
+Media Queries
+
+	Resolution
+	Orientation (Portrait or Landscape)
+	Device width and Height
+	width and height of the Browser window
+
+
+	WIS_ARIA & ARIA - Accessibility of Rich Internet Applications
+		Specification that provide a ways to improve the accessibility of website or Web application
+
+		Imrpoving Accessibility Attrubutes
+			role -- role="document" --> Indentifies responsibility of an element of screen readers. or Assign resposibility to each 								element on ur page.
+				type of role --> Landmark role and Document role
+					landmark role --> Identify 'Points of Interest' on ur site like banner,search area,	
+										Banner,Search,Navigation,Main,ContentInfo,Applicaion,Complementry
+					document role --> Help screen readers indentifypart of the static cotent easily
+										document,aricle,definition,directory,img,list,listitem,math,note,presentation,row.
+
+			aria-live -- aria-live="polite" --> Identifies a region that updates automatically,possibly by ajax.
+			aria-atomic -- Identifies whether the content of a live region should be read or just element changed.
+
+
+Canvas
+		-we can't use css contorl or alter,we can't change width and height via css
+		RGraph
+		
+
+
+AUDIO and VIDEO
+
+		Container --> Containers like an envelope that conatins audio streams and video streams,sometime additional meta date like subtitle 
+			A container wrap audio and video streams
+
+ 		Container Example --> OGG & MP4 & WebM
+
+ 		Safari browser use or support H.264 codec format
+ 		Three type of video format --> H.264,Theora,VP8
+
+ 			H.264 --> IE9,S4,C3,IOS, 
+ 				High quality codec
+ 			Theora --> F,C4,O10,
+
+ 			VP8 --> IE9(if codec Installed),F4,C5,O10
+
+ 		Three type of Audio format -> AAC,MP3,Vorbis(OGG)
+
+ 			AAC --> Advanced Audio Coding - Apple use
+ 			OGG --> FF,O,Chrome,
+ 			MP3(MPEG) --> Chrome,Safari
+
+
+
+
+CSS3
+	RGB -  red green blue 
+		00 - it's all off or none,
+		ff - it's all on
+		The red color red will be  FF0000 all on for red,all off for blue,all off for green
+		The green color will be 00FF00
+
+	Linear-gradient
+	box-shadow
+	text-shadow
+	Transformation
+	Transparent 
+		rgb and rgba
+			rgb --> Hexadecimal funcion	( values from 0 to 255)
+
+		Border-radius
+		RGBa Support -- Hex code along with Transparency
+		Box-Shadow
+		Rotation
+		Gradients
+		@font-face
+
+		Micosoft DirectX filtr for filters
+		contional comment
+
+
+		IE filter
+
+				<!--[if IE lte 8]>
+
+					// CSS  and JS codes here for IE 
+
+				<![endif]-->
+				
+		rotation : for IE use Matrix filters
+
+
+Font
+	Font format EOT --> Embedded Open type
+		True Type and Open Type
+
+	Embedded OpenType (EOT) --> IE[5-8]
+	TrueType(TTF) --> Firefox,Chrome,IE9,O,
+	OpenType (OTF) --> IE9,Chrome,Firefox,Safari,Opera,
+	Scalable Vector Graphics (SVG) --> [IOS]
+	Web Open font(WOFF) --> IE9,FIrefox
+
+
+
+HTML5 advanced
+	Webstorage
+	Web Sql Database
+	Web Socket
+
+	Webstorage(Either using localstorage or sessionstorage) & WebSQLDatabase stroage -- Store data on client
+
+	LocalStorage --> store data in key/value pairs,tied to a domain	and persists across the browser session (C,F,IE8,S,IOS,Android)
+
+	SessionStorage --> Store data in key/value pairs,tied to a domain and it's erased when browser session end (C,F,IE8,S,IOS,Android)
+
+	Web SQL Database --> fully Releation database Support for creating Table ,Insert,uodate,delete and select with transaction,tied to a domain persists across session (C,F,IE8,S,IOS,Android2)
+
+	Offline web application --> Define filles to be cached for offline use,allowing application run to without internet connection (C,F,IE8,S,IOS,Android2)
+
+
+Html5 Sematics Element
+	sematics -- meaning
+
+		header,nav,section,article,aside,figcaption,figure,footer
+	
+
+
+File API
+	syntex : 
+		<input type="file" multiple id="files" />
+		var file = document.getElementId('files');
+		file.files[0].name,file.files[0].size
+
+	A change event is dispatched to the <input> when files are selected 
+
+	Available Meta Data
+		.name -- > Just the file name not the path
+		.size --> file size in bytes
+		.lastmodifieddate --> as Date object
+		.type --> a media type like "text/plain" or "image/jpeg" 
+	
+	Reading File
+		To read the contents,creare the FileReader object-async
+		Add a load event listener to it for when it's done
+		call a read method on the FileReader passing the file
+
+			* Reading the data into plain string,we can get a data url
+			* Allows us to load a fileand use it on <img src>,<audio src>,background-img
+
+				Reading the URL --> readAsDataURL
+
+	Reading a File as Bytes
+		we can also read a file as an array of bytes
+		FileReader.readAsArrayBuffer() will produce an ArrayBuffer
+		

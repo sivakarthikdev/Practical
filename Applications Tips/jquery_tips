@@ -1,0 +1,27 @@
+loading jquery single function object named is jQuery
+
+The jQuery object is derived from the “global” jQuery function object, so it has access to all methods and properties defined in the jQuery function object.
+
+
+
+REST API
+	how to access the resources(Application data)
+	
+
+AppendTo and append
+	
+	AppendTo : Insert every element in the set of matched elements to the end of the target.
+	Append :   Insert content, specified by the parameter, to the end of each element in the set of matched   		     elements.
+
+PrependTo and Prepend
+	
+	PrependTo : Insert every element in the set of matched elements to the beginning of the target.
+	Prepend :   Insert content, specified by the parameter, to the beginning of each element in the set of 			    matched elements. 
+
+Afetr and InsertAfter
+	After : 	Insert content, specified by the parameter, after each element in the set of matched elements.
+	InsertAfter :Insert every element in the set of matched elements after the target. 
+
+Before and InsertBefore
+	Befor : Insert content, specified by the parameter, before each element in the set of matched element
+	InsertBefore : Insert every element in the set of matched elements before the target.

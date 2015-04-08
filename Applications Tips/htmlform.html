@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Html5 Form Attributes</title>
+		<style>
+		.formblock{float:left;margin:10px;padding: 10px;
+			-webkit-font-size:15px;
+			-moz-font-size:10px;
+		}
+		fieldset{border:2px solid #445678;border-radius: 3px;}
+
+		</style>
+	</head>
+	<body>
+		<div id="wrapper"> 
+			<div class="formblock">
+				<span>Form elements</span>
+				<fieldset>
+				<legend>Form block 1</legend>
+				<form id="registerform" autocomplete="on" action="register">
+					<input type="text" id="firstname" name="firstname" autofocus required title="firstname"/> <br />
+					<input list="browsers" name="list"><br />
+					<input type="text" id="lastname" name="lastname" required title="lastname"/> <br />
+					<input type="submit" value="submit"/>
+					<input type="submit" value="Submit as backend" formtarget="_blank" formmethod="post" formaction="admin_register">
+				</form>
+				</fieldset>
+			</div>
+			<div class="formblock">
+				<fieldset>
+				<legend>Form block 2</legend>
+				<form id="registerform1" action="register1">
+					<input type="email" id="email" name="email" multiple required title="email"/> <br />
+					<input list="browsers" name="list"><br />
+					<img>
+					<input type="file" id="files" name="files" multiple onchange="fileChange(this);"/><br />
+					<input type="submit" value="submit"/>
+				</form>
+				</fieldset>
+			</div>
+			<div class="formblock">
+				<fieldset>
+					<legend>Form block 3</legend>
+					<input type="text" name="age" form="registerform1"><br />
+					<input type="number" name="number" step="10" form="registerform" form="registerform1">
+				</fieldset>
+			</div>
+			<datalist id="browsers">
+			  <option value="Internet Explorer">
+			  <option value="Firefox">
+			  <option value="Chrome">
+			  <option value="Opera">
+			  <option value="Safari">
+			</datalist>
+		</div>
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<script type="text/javascript">
+			var fileChange = function(input){
+				var reader = new FileReader();
+				reader.onload = function(){
+					document.querySelector('img').src = reader.result
+				}
+				//reader.readAsText(input.files[0],"UTF-16")
+				console.log(input.files[0].name);
+				reader.readAsDataURL(input.files[0])
+			}
+		</script>
+	</body>
+</html>

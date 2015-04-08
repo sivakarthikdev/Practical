@@ -1,0 +1,59 @@
+/* Forum Styles */
+.author_head{/* border-bottom:1px solid grey; */margin-left:10px;width:595px;background:url("/images/forum/bettyboopjuly.jpg")}
+.post_title p{font-size: 13px;height: auto;margin-bottom: 10px;margin-left: 20px;margin-top:10px;}
+.quote_content span{margin-left:20px;font-size:13px;word-wrap:break-word;}
+.quote_content p{/* border:1px solid grey; */width:82%;height:auto;margin-left:20px;text-align:center;background:url("/images/Quote2.png") no-repeat scroll right bottom transparent;padding-bottom:20px;padding-right:45px;}
+.first_description p{margin-bottom: 0px;margin-left: 0px;padding-top: 5px;font-size:13px;}
+.post_titlename p{color: white;float: right;font-weight: bold;padding-right: 5px;}
+.post_titlename {background: none repeat scroll 0 0 #ED008C;color: #FFFFFF;float: left;font: 13px;tahoma,verdana,geneva,lucida,'lucida grande',arial,helvetica,sans-serif;padding: 1px 0 3px 13px;width: 598px;}
+.post_titlename span{font-size: 12px; font-weight: bold;padding-top:4px;float:left;}
+.quote {display: block;padding: 0 60px;width: 350px;/* height: 1px; */}
+.quote:before, .quote:after {color: #ED008C;/*display: block;*/font-size: 400%;width: 50px;}
+.quote:before {content: open-quote;/*height: 0;*/margin-left: -0.55em;}
+.quote:after {content: close-quote;/*height: 50px;margin-top: -70px;*/margin-left: 330px;}
+.quote_post_ratings {float:left;width:612px;margin-bottom:20px;padding-top:10px;}
+.post_quote_content {float:left;width:589px;padding:10px;border:1px solid #ddd;}
+.post_quote_content .author_head {margin-left:0px;padding-bottom:10px;}
+.post_quote_content .post_title p {margin-left:0px;padding-top:10px;padding-bottom:10px;margin-bottom:0px;margin-top:0px;}
+.post_quote_content .first_description {padding-bottom:0px;}
+.post_quote_content .first_description p {padding-bottom:10px;padding-top:10px;margin-left:0px;margin-bottom:0px;}
+.fb_iframe_widget {padding:0px 0px 0px !important; }
+.joinin_fb_imgs {margin-top:10px;}
+.post_quote_content .author_head a{font-size:13px;}
+.forum_block_new td.sl-no{text-align:center;}
+.forum_block_new td.thread-post-count{text-align:center;}
+.forum_block_new td.thread-lenth{text-align:center;}
+.forum_block_new td.forum_title{width:40%;}
+.subs_details img{float:left;margin:7px 0px;}
+.reply_post_button {float:left;width:100%;}
+.topic_desc p{font-size:12px;}
+/* .author_head img{float:left;margin-right:10px;} */
+.post_title{float:left;width:100%;font-weight:bold;}
+.subs_details{width:18%;float:left;border-right:1px solid #DDDDDD;}
+.subs_details span{float:left;font-size:12px;}
+.subs_details a{padding-bottom:10px;}
+.desc_details{float:left;width:74%;padding-left:20px;}
+/*styles for merchant profiles*/
+.add_rgt_infos input {border: 1px solid #CCCCCC;    color: #555;    float: left;    font-family: arial;    font-size: inherit;    font-weight: normal;    height:24px;    padding: 3px 0 3px 10px;    width: 308px;}
+.add_rgt_infos textarea {height:80px;width:308px;font-family:arial;font-size:inherit;color:#555;padding:3px 0 3px 10px;border:1px solid #CCC;}
+
+.forum_block_new {float:left;width:100%; padding-bottom: 20px;  padding-top: 20px;}
+.forum_block_new table {font-family:arial;border:1px solid #DEDEDE;border-left:none;border-top:none;}
+.forum_block_new tr {font-weight:bold;font-family:arial;border:1px solid #DEDEDE;/* height:39px; */}
+.forum_block_new th {background-color:#00;color:#FFFFFF;font-size:1.2em;font-weight:bold;font-family:arial;border:1px solid #DEDEDE;border-bottom:none;border-right:none;padding:6px 9px;text-align: left;}
+.forum_block_new td {font-size:1.3em;color:#555;border:1px solid #DEDEDE;border-right:none;border-bottom:none;text-align:left;padding:9px 5px;}
+/*  .forum_block_new td:last-child {color:#FF7200;}
+.forum_block_new tr.selected {background: url("/images/selected_bg_row.png") repeat-x scroll left top 15px transparent;} */
+.forum_block_new tr.selected span {float:left;}
+.forum_block_new table{width:100%}
+.forum_block_new div a{float:left;width:auto;}
+.last_post_head{float:left;width:auto;padding-bottom:5px;width:100%;}
+.last_post_name{float:none;text-align:left;width:auto;padding-bottom:10px;font-weight:normal;}
+.last_post_name a{float:none !important;}
+.last_post_date{float:none;text-align:left;width:auto;padding-bottom:10px;font-weight:normal;} 
+.quote_content{padding-bottom:10px;padding-top:10px;float:left;width:100%;background:url("/images/Quote1.png") no-repeat scroll left top transparent;margin-left:10px;}
+
+.forum_block_new tr:nth-child(even) {background-color:#ededed;}
+.forum_block_new tr:nth-child(odd) {background-color:#f2f2f2;}
+.forum_block_new th {background-color: #000;padding: 6px 9px; font-size: 1.4em; text-align:left}
+.forum_block_new td {vertical-align: top;padding: 5px;}

@@ -1,0 +1,6 @@
+.slides { padding-left: 6px;    width: 296px;    float:left;    }
+.slides_control {padding-bottom:10px;}
+.pagination { margin-bottom: 0 !important;    margin-top: 10px;    text-align: center;}
+.pagination li {    background: url("/images/slider_nav.gif") no-repeat scroll left top transparent;    color: #333333;    display: inline-block;    font-family: Arial;    font-size: 12px;    font-weight: bold;    margin-left: 3px;    padding: 4px 10px 5px 8px;}
+.pagination li:hover, .pagination li.current {    background: url("/images/active_slider_nav.gif") no-repeat scroll left top transparent;    color: #FFFFFF !important;}
+#myElement_wrapper{height: 300px !important;position: relative;width: 600px !important;margin-top: 10px;}

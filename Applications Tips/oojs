@@ -1,0 +1,65 @@
+
+	The main difference between JavaScript and the other languages is that, there are no
+	Classes in JavaScript whereas Classes are very important for creating objects. However there are ways
+	through which we can simulate the Class concept in JavaScript.
+	
+	Another important difference is Data Hiding. There is no access specifier like (public, private and protected) in JavaScript but we can simulate the concept using variable scope in functions.
+
+	JavaScript as it is Prototype based language
+
+Objects
+	Creating Object
+		1) creating object literal
+			var obj = {}
+		2) creating object with Object.create
+			var obj = Object.create(null)
+		3) creating object using new keyword
+			function test() {}
+			var obj = new test()
+
+Class
+	function Car() {
+		this.color = "red";
+		this.model = 568;
+		this.break = function() { alert(this.color+' '+this.model) }
+	}
+	// creating car instance
+	var vechile = new Car();
+
+Constructor
+	* Actually Constructor is a concept that comes under Classes.
+	* Constructor is used to assign values to the properties of the Class while creating object using new operator.
+
+	function Car(color,model) {
+		//Assigning values through constructor
+		this.color = color;
+		this.model = model;
+		this.break = function() { alert(this.color+' '+this.model)}
+	}
+
+	new Car('red',6754);    // creating car1 instance
+	new Car('green',8790);  // creating car2 instance
+
+Inheritance
+	Inheritance is a process of getting the properties and function of one class to other class.
+	function Student(){}
+	 //1)Prototype based Inheritance
+		  Student.prototype= new Person();
+     //2)Inhertance throught Object.create
+		  Student.prototype=Object.create(Person);
+		  var stobj=new Student();
+		  alert(stobj.sayHi());
+
+	We can do inheritance in above two ways.
+
+
+Abstraction
+	*. Abstraction means hiding the inner implementation details and showing only outer details
+	*. But we don't have any direct Abstract or Interface in JS
+
+	$('#id') or document.getElementById('id') -- > 
+		But we don't need to know that we can happy use the $("#ele") without knowing the inner details of the implementation.
+
+Polymorphism
+	The word Polymorphism in OOPs means having more than one form.
+	In JavaScript a Object, Property, Method can have more than one form. Polymorphism is a very cool feature for dynamic binding or late binding

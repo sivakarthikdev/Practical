@@ -1,0 +1,284 @@
+Tips for Object Oriented Programming Language
+
+	Primative DataTypes
+		Strings,Numbers,Arrays,Loops and Conditions
+		Common Operators(+,-),Delete and typeof
+
+		Variables : 
+			two types: Declare Variable and Initialize variable
+			* Variables are used to store data
+			* We can't start with number,which meand that's invalid
+		Operators : 
+			operator take one or two values perform a operation an return value
+			= assignment operator
+			+= compound operator
+		Primative Data Types : 
+			Numbers,Strings,Boolean,Undefined,Null
+
+			Null is considered an object
+
+				Primative (Numbers,Strings,Boolean,Undefined,null)
+				Non-Primative (Objects)
+
+				Typeof operator - we wand to know the data type of the variable or a value
+
+Constructor function
+	The benefit of using constructor functions is that they accept parameters, 
+	which can be used when creating new objects.
+	eg :
+		Let's modify the constructor to accept one parameter and assign it to the name property.
+				function Hero(name) {
+					this.name = name;
+					this.occupation = 'Ninja';
+					this.whoAreYou = function() {
+						return "I'm " + this.name + " and I'm a " + this.occupation;
+					}
+				}
+
+	Now you can create different objects using the same constructor:
+		>>> var h1 = new Hero('Michelangelo');
+		>>> var h2 = new Hero('Donatello');
+		>>> h1.whoAreYou();
+
+
+
+DOM
+
+	We can access any element on the page (Remove or add)
+
+	DOM is a language Indepentent API
+	
+	The parent-child relationships can be represented graphically in an ancestry tree, called the DOM tree
+
+	Create DOM Nodes,Modify DOM Nodes,Create New Nodes,Remove Nodes
+
+	All Nodes -- Document Nodes,Text Nodes,Element Nodes,Attribute Node
+
+	HTML - Content, Javascript - Behavior, CSS - Formatting
+
+	addEventListeners() is a method called on the node object
+
+	BOM & DOM
+
+
+
+Function
+	Functions allow you group together some code, give this code a name, and reuse it later, addressing it by name
+	parameters==arguments both are same
+
+	Return Value with array
+		function swap(a,b){ return [a+b,a*b]}
+		swap(2,3)--> [5, 6]
+		swap(2,3)[0]--> 5
+		swap(2,3)[1]--> 6
+
+	function call
+		"to call" == "to invoke"
+
+	Parameters
+		swap(2,3,4,5) --> Extra parameters will be silently ignored
+		each function will create arguments inside of the function --> arguments
+
+	Predefined Function
+		ParseInt,ParseFloat,eval,isNaN,etc
+		ParseInt deafult assume the second parameter is decimal(10) --> parseInt(3777,10)==parseInt(377)
+				Avoid or Omit the second parameter
+				
+		isFinite() checks whether the input is a number that is neither Infinity nor NaN.
+
+	Scope of Variable
+		function scope --> variable defined inside of the function,it's not visible outside of the function
+
+		var a = 123;
+		function f() {
+		alert(a);
+		var a = 1;
+		alert(a);
+		}
+		f();
+
+		You might expect that the first alert() will display 123 (the value of the global variable a) and the second will display 1 (the local a). 
+		This is not the case. The first alert will show "undefined". This is because inside the function the local scope is more important than the global scope. 
+		* So a local variable overwrites any global variable with the same name. At the time of the first alert() a was not yet defined (hence the value undefined) but it still existed in the local space.
+
+	Functiona are Data
+		funcions in javascript are actually data
+		Javascript functions are data,but the special kind of data with two Important features
+			1) They contain code, 2) They are executable (can be invoke or call)
+		functions are data assigned to variables,
+
+		a function name cannot start with a number and it can contain any combination of letters, numbers, and the underscore character
+
+	Anonymous Function
+		functions are like any other variable so they can also be used without being assigned a name
+			function(a){return a;}
+				1) You can pass an anonymous function as a parameter to another function. The receiving function can do something useful with the function that you pass.
+				2) You can define an anonymous function and execute it right away
+	
+	Callback function
+		Here's an example of a function that accepts two functions as parameters, executes them, and returns the sum of what each of them returns.
+		function invoke_and_add(a, b){
+			return a() + b();
+		}
+		Now let's define two simple additional functions that only return hardcoded values:
+		function one() {
+			return 1;
+		}
+		function two() {
+			return 2;
+		}
+		Now we can pass those functions to the original function add() and get the result:
+			>>> invoke_and_add(one, two);
+			3
+
+		another example of same as above
+
+			invoke_and_add(function(){return 1;}, function(){return 2;})
+				function(){return 1;} --> Anonymous function
+
+		*	They let you pass functions without the need to name them (which means there are less global variables)
+		*	You can delegate the responsibility of calling a function to another function (which means there is less 		codeto write)
+		*	They can help with performance
+
+	Self-Invoking Function
+		eg: self invokig anaonymous function
+			(
+				function(){
+
+				}
+			)();
+
+			(function(){
+
+			})()
+
+			One good reason for using self-invoking anonymous functions is to have some work done without creating global variables
+
+			(
+			function(param1,param2){
+			  return param1 + param2;
+			})('karthikeyan','siva')
+			result ---> "karthikeyansiva"
+
+			A drawbak is we can't execute same function twice(unless you put it inside a loop or another function)
+
+	Inner(Private) function
+		Function have inside another one function
+		function a(param) {
+			function b(theinput) {
+				return theinput * 2;
+			};
+			return 'The result is ' + b(param);
+		};
+
+		Use of Private function or benefit
+			* You keep the global namespace clean (smaller chance of naming collisions).
+
+	Functions that return functions
+		function a() {
+			alert('A!');
+			return function(){
+					alert('B!');
+			};
+		}
+
+		In this example the function a() does its job (says A!) and returns another function that does something else (says B!). You can assign the return value to a variable and then use this variable as a normal function:
+		>>> var newFunc = a();
+		>>> newFunc();
+		Here the first line will alert A! and the second will alert B!.
+
+		If you want to execute the returned function immediately, without assigning it to a new variable, you can simply use another set of parentheses. The end result will be the same.
+		>>> a()();
+
+	Function, Rewrite Thyself
+		Because a function can return a function, you can use the new function to replace the old one
+		function a() {
+			alert('A!');
+			return function(){
+					alert('B!');
+			};
+		}
+		you can take the value returned by the call to a() to overwrite the actual a() function:
+
+		a = a();
+		The above alerts A!, but the next time you call a() it alerts B!.
+
+		This is useful when a function has some initial one-off work to do(first time)
+		The function overwrites itself after the first call in order to avoid doing unnecessary repetitive work every time it's called.
+
+
+	Closures
+		Scope chain -- page no 97
+			We define a function n() nested inside f(),
+
+			var a = 1;
+			function f(){
+				var b = 1;
+				function n() {
+					var c = 3;
+				}
+			}
+
+			n() will have access to variables in its own scope, plus the scope of its "parents". This is known as scope chain,
+
+		Lexical scope
+
+
+
+
+
+
+
+
+
+
+Prototype
+	prototype is a property that gets created as soon as you define the function. Its initial value is an empty object
+
+	Adding Methods and Properties Using the Prototype
+		refer w3school what is prototype
+
+
+Prototype is a global constructor in JavaScript. It can construct new properties and methods for any JavaScript Objects.
+
+	Array.prototype.ucase=function()
+{
+  for (i=0;i<this.length;i++)
+  {this[i]=this[i].toUpperCase();}
+}
+
+
+
+
+There is three ways to create classes in JavaScript.
+1. Define methods internally
+function MyClass (parameter){
+    this.something = parameter;
+    this.getParameter = function() {
+        return this.something;
+    };
+}
+
+var my_class = new MyClass('Something');
+alert(my_class.something);
+my_class.getParameter();
+2. Using JSON
+var MyClass = {
+    something: "parameter",
+    getParameter: function() {
+        return this.something;
+    }
+}
+
+alert(MyClass.something);
+alert(MyClass.getParameter());
+3. Singleton using a function
+var MyClass = new function() {
+    this.something = "parameter";
+    this.getParameter = function() {
+        return this.something;
+    };
+}
+
+alert(MyClass.something);
+alert(MyClass.getParameter());

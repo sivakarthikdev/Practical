@@ -1,0 +1,12 @@
+<div ng-controller="brandsController">
+	<div class="content_block" ng-repeat="content in contents">
+		<h2>{{content.title}}</h2>
+		<div class="image_content">
+			<img ng-src="{{content.imgSrc}}" alt="{{content.title}}" />
+		</div>
+		<div class="desc_content">
+			<p class="content_paragraph">{{content.content}} </p>
+		</div>
+	</div>
+</div>
+

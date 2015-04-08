@@ -1,0 +1,294 @@
+.ui-sortable-placeholder {/*border: 1px dashed black;*/ visibility: visible !important;background:#F6FCD2;border:1px dotted #00345D}
+.ui-sortable-placeholder * { visibility: hidden;float:left;}
+.content_highlight{background:#FFE45C;/*border:3px dotted #FFE45C*/}
+.component_header .tool_comp{float:right;width:auto;    margin-top: -26px;}
+
+ .component_header .tool_comp a{width:19px;float:left;height:22px;padding:2px; outline: none;}
+/*.component_header .tool_comp .edit_comp{background: url("/images/add_edit/all_addedit_icons_new.png") no-repeat scroll 24% -10% transparent;}
+ .component_header .tool_comp .edit_comp:hover {background: url("/images/add_edit/all_addedit_icons_new.png") no-repeat scroll 24% 97% transparent;} 
+.component_header .tool_comp .close_comp{background: url("/images/add_edit/all_addedit_icons_new.png") no-repeat scroll 97% -11% transparent;}
+.component_header .tool_comp .close_comp:hover {background: url("/images/add_edit/all_addedit_icons_new.png") no-repeat scroll 97% 96% transparent;}
+.component_header .collepse_comp{background: url("/images/add_edit/all_addedit_icons_new.png") no-repeat scroll 48% 7% transparent;}
+.component_header .collepse_comp:hover{background: url("/images/add_edit/all_addedit_icons_new.png") no-repeat scroll 48% 87% transparent;}
+.component_header  .expand_comp{background: url("/images/add_edit/all_addedit_icons_new.png") no-repeat scroll 0% 9% transparent;}
+.component_header  .expand_comp:hover{background: url("/images/add_edit/all_addedit_icons_new.png") no-repeat scroll 0% 85% transparent;}
+*/
+.component_header .collepse_comp {    background: url("/images/add_edit/addEdit_icon_set1.png") no-repeat scroll 59% -10% transparent;}
+.component_header .collepse_comp:hover {    background: url("/images/add_edit/addEdit_icon_set1.png") no-repeat scroll 59% 100% transparent;}
+.component_header  .expand_comp{background: url("/images/add_edit/addEdit_icon_set1.png") no-repeat scroll 20% -10% transparent;}
+.component_header  .expand_comp:hover{background: url("/images/add_edit/addEdit_icon_set1.png") no-repeat scroll 20% 100% transparent;}
+.component_header .tool_comp .edit_comp{background: url("/images/add_edit/addEdit_icon_set1.png") no-repeat scroll 39% -10% transparent;}
+.component_header .tool_comp .edit_comp:hover {    background: url("/images/add_edit/addEdit_icon_set1.png") no-repeat scroll 39% 100% transparent;}
+.component_header .tool_comp .close_comp{background: url("/images/add_edit/addEdit_icon_set1.png") no-repeat scroll 99% -10% transparent;}
+.component_header .tool_comp .close_comp:hover {    background: url("/images/add_edit/addEdit_icon_set1.png") no-repeat scroll 99% 100% transparent;}
+.component_header .tool_comp .fragment_edit{background: url("/images/add_edit/addEdit_icon_set1.png") no-repeat scroll 0% -10% transparent;}
+.component_header .tool_comp .fragment_edit:hover{background: url("/images/add_edit/addEdit_icon_set1.png") no-repeat scroll 0% 100% transparent;}
+
+.ui-sortable .component_header {cursor:move;}
+.component_header .fragment_edit{background: url("/images/add_edit/edit1.png") no-repeat scroll 0% 9% transparent;}
+
+#components_save{float:right;}
+#components_list .ui-draggable{float:left;margin-left: 3px; margin-right: 3px;}
+
+#ajaxBusyloader img{
+	 font-size: 20px;
+color: black;
+text-align: center;
+margin-top: 30%;
+margin-left:auto;
+margin-right:auto;
+display:block;
+}
+.loading_ajax{ display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: repeat-x scroll 50% 50% #AAA;opacity:0.3;}
+.ui-dialog .form_saving{color: red;float: right;font-size: 15px;font-weight: bold;margin-right: 90px;}
+
+.ui-tabs .ui-tabs-component .tool_comp a{
+	float: left;
+    margin-bottom: 0;
+    margin-top: 46px;
+    position: absolute;
+    /* right:236px; */
+    right:0px;
+    top:0;
+}
+
+/*code for dialog box*/
+/*
+ * jQuery UI Dialog 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Dialog#theming
+ */
+.ui-dialog { position: absolute; padding: .2em; width:525px !important; overflow: hidden;background:#fff; height:auto !important;/*margin-top:100px */}
+.ui-dialog .ui-dialog-titlebar { padding: .4em 1em; position: relative;background:#fff;height:20px;  }
+.ui-dialog .ui-dialog-title { float: left; margin: .1em 16px .1em 0; } 
+.ui-dialog .ui-dialog-titlebar-close { position: absolute; right: 2.3em; top: 50%; width: 19px; margin: -10px 0 0 0; padding: 1px; height: 18px; }
+.ui-dialog .ui-dialog-titlebar-close span { background: url("/images/bt_close.png") no-repeat scroll left 0 transparent !important;display: block;height: 17px;margin: 1px;width: 26px;}
+.ui-dialog .ui-dialog-titlebar-close:hover, .ui-dialog .ui-dialog-titlebar-close:focus { padding:1px; }
+.ui-dialog .ui-dialog-content { position: relative; border: 0; padding: .5em 1em; background: #fff; overflow: auto; zoom: 1; }
+.ui-dialog .ui-dialog-buttonpane { text-align: left; border-width: 1px 0 0 0; background-image: none; margin: .5em 0 0 0; padding: .3em 1em .5em .4em; }
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset { float: right; }
+.ui-dialog .ui-dialog-buttonpane button { margin: .5em .4em .5em 0; cursor: pointer; }
+.ui-dialog .ui-resizable-se { width: 14px; height: 14px; right: 3px; bottom: 3px; }
+.ui-draggable .ui-dialog-titlebar { cursor: move; }
+.ui-draggable #existing_component_dialog{ height:455px !important;    width: 510px !important;}
+
+
+/*code for dialog box*/
+.ui-dialog .ui-tabs-nav {    /*resets*/margin: 0; padding: 0; border: 0; outline: 0; line-height: 1.3; text-decoration: none; font-size: 100%; list-style: none;       float: left;    position: relative;    z-index: 1;    background: url("/images/grayline.jpg") repeat-x scroll left bottom transparent;    float: left;    padding-bottom: 1px; padding-left:5px;   width: 308px;}
+.ui-dialog .ui-tabs-nav ul {    /*resets*/margin: 0; padding: 0; border: 0; outline: 0; line-height: 1.3; text-decoration: none; font-size: 100%; list-style: none;}
+.ui-dialog .ui-tabs-nav li {    /*resets*/  border-right:1px solid #ccc; outline: 0; line-height: 1.3; text-decoration: none;list-style: none;    float: left;       float: left;    font-size: 12px;    list-style-type: none;    padding: 0px 0 0px 0px;margin-right:0px;}
+.ui-dialog .ui-tabs-nav li a {        border: 0 none;    color: #fff;    float:left;    font-size: 1em;    font-weight:normal;    line-height: 1.3;    list-style: none outside none;    margin: 0;    outline: 0 none;    padding:4px 12px 6px 10px;    text-decoration: none;       }
+.ui-dialog .ui-tabs-nav li a:hover {   color:#000; /*   padding:6px 5px 8px; */     /*   color: #0b5b98;*/}
+.ui-dialog .ui-tabs-nav li.ui-tabs-selected {    background:#000;    float: left;        padding: 0px 0 0px 0px;     }
+.ui-dialog .ui-tabs-nav li.ui-tabs-selected a {    background:#fff;    color: #000;    font-weight:normal;float:left;    padding:4px 12px 6px 10px;}
+.ui-dialog .ui-tabs-panel {    /*resets*/margin: 0; outline: 0; line-height: 1.3; text-decoration: none; font-size: 100%; list-style: none;            color: #362b36;border: 1px solid #CCCCCC;   float: left;    padding:3px;    width:496px;background:#fff;border-top:none;}
+.ui-dialog .ui-tabs-hide {   display: none;/* for accessible hiding: position: absolute; left: -99999999px*/;}
+.ui-dialog .ui-tabs {  background:#000;    clear: both;    float: left;    margin-bottom:0px;    width: 100%;border-top:5px solid #5A97D2;}
+.ui-dialog .ui-tabs-panel {}
+/*.tab_strip{display:block;}*/
+.ui-dialog .ui-tabs-panel ol{padding:0 10px;}
+.ui-dialog .ui-tabs-panel ol li{list-style-type:none;line-height:16px;border-bottom:1px dotted #CCCCCC;color:#555;font-size:11px;padding:8px 0px;margin:0 0 0 0px;}
+.ui-dialog .ui-tabs-panel ol li a{font-weight:normal; font-size: 12px;}
+.ui-dialog .ui-tabs-panel ol li span.icon{background:transparent url(/images/icon.jpg) no-repeat scroll 4px center;color:#859E0F;padding-left:18px;}
+.ui-dialog .ui-tabs-panel ol li a span.audio{font-weight:normal; background:transparent url(/images/audio_pic.jpg) no-repeat scroll left center; font-size:11px; font-weight:normal; color:#333; padding-left:20px; padding-right:4px;}
+.ui-dialog .ui-tabs-panel ol li a span.video{font-weight:normal; background:transparent url(/images/video_icon.jpg) no-repeat scroll left center; font-size:11px; font-weight:normal; color:#333; padding-left:20px; padding-right:4px;}
+.ui-dialog .tab_status{padding:3px;width:98%;}
+.ui-dialog .ui-tabs-panel ol li:last-child{border-bottom:0px;}
+.ui-dialog .ui-tabs-nav li.ui-tabs-selected a:hover {background:#fff;color: #000;padding:4px 12px 6px 10px;}
+.ui-dialog .ui-tabs-nav li:last-child {border-right:none;}
+
+.ui-widget-overlay {background: repeat-x scroll 50% 50% #000;opacity:0.7;}
+
+.ui-widget-overlay {height:100%; display:block !important;left:0;position:fixed;top:0;width:100%;z-index: 1000;}
+
+.adminButton input {float: left;margin-left: -331px !important;position: absolute !important;}
+
+.ui-dialog #position { position: relative;top: 252px;}
+
+
+#components_list .component_block{width:75px;height:75px;overflow:hidden;border:1px solid #FFFFFF;}
+/*.widget_toggle{float:left;padding-top: 5px;}*/
+.widget_toggle {
+    float: right;
+    padding-top: 10px;
+    margin-right:20px;
+} 
+/*styles for add_edit Popup*/
+.comp_tabs table tr td {    font-size: 1.2em;    padding-bottom: 5px;    padding-top: 3px;float:left;width:200px;}
+.left_text {    float: left;    width: 170px;}
+.comp_tabs table tr td input {    border: 1px solid #ACACAC;    width:290px;}
+.comp_tabs table tr td textarea {    border: 1px solid #ACACAC;    font-family: arial;    font-size: 1.2em;    width:290px;}
+.submit_button_bg, .componenet_submit_button {    color: #000000;    float: left;    font-family: Arial;    font-size: 12px;    height: 27px;    margin: 0;    padding-bottom: 4px;    width: 60px;}
+.comp_tabs {width:504px !important;}
+#position {float: left;    padding-top: 7px;    top: 0 !important;    width: 100%;}
+.comp_tabs fieldset {padding-bottom:5px;}
+#entry_type td {float:left;width:200px;}
+#component_type input {padding-right:3px;}
+#component_type {float: left;    font-size: 1.2em;    padding: 7px 0;    width: 100%;}
+.adminLinkButton {padding-bottom:10px;}
+.checkbox_style {float:left;width:20px !important;}
+.comp_tabs label {float:left;width:198px;}
+.comp_tabs select {width:294px;}
+.adminButton input {margin-left:0px !important;}
+.common_listing_button {padding-bottom:5px;}
+#entry_type {float:left;width:100%;padding-top:10px;}
+.adminLinkButton a {  color: #054A6C; font-size: 1.2em;    line-height: 18px;}
+#entry_type textarea {width:289px;}
+
+.widget_toggle a{font-size:1.2em;font-weight:bold;margin-left:20px;cursor:pointer;outline: none;}
+.widget_toggle a#control_widget_panel{top:0px;/*background:url("/images/bt_open.png") no-repeat scroll left 0 transparent;*/padding-bottom:0px;padding-left: 0px;padding-top: 0px;}
+/*.close_panel{background: url("/images/bt_close.png") no-repeat scroll left 0 transparent !important;}*/
+.submit_style_form{border:0px;font-size:1.2em;margin-left:20px;font-weight:bold;cursor:pointer;background:none;font-family:arial;color: #054A6C;}
+.preview_addedit a{font-size:1.2em;font-weight:bold;margin-left:20px;cursor:pointer;position:relative;top:1px;outline: none;}
+/*.preview_addedit{float:left;width:auto;padding-top: 5px;}*/
+.preview_addedit {
+    float: right;
+    padding-top: 10px;
+    width: auto;
+    padding-right:0px;
+} 
+.addedit_widget_parent {
+    background: none repeat scroll 0 0 #161616;
+    opacity:0.99;
+    float: left;
+    position: fixed;
+   /* margin-top:25px;*/
+    width:100%;
+    z-index:1000;padding-bottom: 8px;/*margin-top:38px;*/
+}
+#components_list {
+    background: none repeat scroll 0 0 #161616;
+    float: left;
+  /*  margin-bottom: 12px;
+    margin-top: 27px;
+    padding: 10px;
+    position: absolute;*/
+    width:99%;
+    margin-top:10px;
+} 
+
+#components_list .section_content {
+    clear: none;
+    float: left;
+    margin-bottom: 10px;
+    width:75px !important;
+    height:75px !important;
+   background : url("/images/add_edit/video.png")
+}
+
+
+/*changes give by ramkumar start*/
+body.widgetDisabled .tool_comp, body.widgetDisabled .non-header-component {display:none;}
+body.widgetDisabled .component_header {cursor:default;}
+body.widgetEnabled .tool_comp, body.widgetEnabled .non-header-component {display:block;}
+body.widgetEnabled .component_header {cursor:move;}
+body {-webkit-user-select: none;-moz-user-select: none;-o-user-select: none;user-select: none;} 
+/*changes give by ramkumar start*/ 
+.emptyloadingindicator{display:block;margin:0px;padding:0px; position: absolute;right:242px;top:100px;width:auto;}
+#components_list .pal_tip span{display:none;float: left;position: absolute;top: 90px;border:2px solid #FFE4C4;background:#E0FFEE;color:#000; border-radius:5px;width:auto;}
+.ui_aidlog_position{position:fixed !important;}
+.enable_addedit{margin-right:30px;}
+.addedit_widget_parent a{color:#F0FFFF}
+.addedit_widget_parent a:hover{color:#B0C4DE}
+.comp_ui_helper{height:80px;width:auto !important;border:1px solid #989898;font-weight:bold;background:#fff;}
+
+/*Next steps added by karthik*/
+.overlay_ae {position: absolute;background-color: rgba(0, 0, 0, .5);width: 100%;height: 100%;opacity:0.5;z-index:100000;}
+.remove_comp_overlay {position: absolute;background: url("/images/add_edit/delete.png") repeat scroll 59% -10% transparent !important;width: 100%;height: 100%;opacity:0.5;z-index:10000}
+.container_block .inner_section_content {
+	position:relative;
+	top:0px;
+	left:0px;
+	padding:0px !important;
+/*	cursor:not-allowed;*/
+	width:100%;
+}
+.container_block .section_content{
+	position:relative;
+	top:0px;
+	left:0px;
+	padding:0px !important;
+//	cursor:not-allowed;
+	width:100%;
+}
+.save_display{visibility:visible !important;color:#CAD184 !important;}
+.comp_ui_helper p{min-width:200px;
+min-height:20px;
+background: black;
+border-top: 5px solid rgb(90, 151, 210);
+opacity:0.5; 
+}
+.componet_content_uihelper{min-height:40px;background:#989898;min-width:200px;opacity:0.5}
+.comp_ui_helper p{
+font-size: 13px;
+font-weight: bold;
+color: #FFFFFF;
+text-transform: uppercase;
+padding: 3px;
+}
+
+/*Widget tabs*/
+.widget_components_tabs{width:600px;margin-left:40px;
+background:#696969;
+border: 2px solid white;
+}
+.widget_components_tabs ul{border-bottom:1px solid #fff;}
+.widget_components_tabs .ui-draggable{margin-top:4px;}
+.widget_components_tabs ul li.ui-state-active a{background: rgb(5, 74, 108);}
+.ui-tooltip {
+	padding: 10px 20px;
+    color: white;
+    border-radius: 20px;
+    font: bold 14px "Helvetica Neue", Sans-Serif;
+    text-transform: uppercase;
+    box-shadow: 0 0 7px black;
+	background: black;
+    border: 2px solid white;
+    position:absolute;
+    width:auto;
+    z-index:100000;
+}
+
+#control_widget_panel{
+	font-size: 1.2em;
+	font-weight: bold;
+	margin-left: 20px;
+	cursor: pointer;
+	outline: none;
+	float: left;
+	width: 30px;
+	margin-left: 700px !important;
+	margin-top:10px;
+}
+#control_widget_panel{display:none;}
+#control_widget_panel.open_panel{background: url("/images/add_edit/close-and-open1.png") no-repeat scroll left -11px;width: 20px;height: 19px;margin-top: 5px;z-index:10000;opacity:0.5;}
+#control_widget_panel.open_panel:hover{opacity:1;}
+#control_widget_panel.close_panel{background: url("/images/add_edit/close-and-open1.png") no-repeat scroll left 15px transparent;width: 20px;height: 29px;margin-top: -10px;z-index:10000;opacity:0.5;}
+#control_widget_panel.close_panel:hover{opacity:1;}
+.undo_components{float: right;
+font-size: 12px;
+font-weight: bold;
+margin-right: 80px;
+margin-top: 11px;
+opacity: 1;
+color:red;
+}
+
+.widget_components_tabs .ui-tabs-nav li a:hover{background:none;color:#fff;}
+.widget_components_tabs .ui-tabs-nav .ui-tabs-active a{color:#fff;}
+
+#emp_form input:focus {
+    border-color:rgba(82, 168, 236, 0.8) !important;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6);
+}

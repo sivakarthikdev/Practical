@@ -1,0 +1,45 @@
+Canvas Tag
+	var canvas = document.getelementById('mycanvas')
+	var context = canvas.getcontext('2d');
+	context.rect();
+	
+	HTML 5
+		It's come new Tage and features and API
+			Header,Footer,Section,Nav,Article,Video and Audio
+			Form 2.0 and Client side validation	
+			Native Browser support for Audio and Video Tag
+			Canvas API and SVG
+			Web storage
+			Offline Application
+			Geolocation
+			Drag and Drop
+			Web Workers
+			Websocket New Communication API
+
+	W3C lead and founder --> Berners--lee
+	WHATWG --> Web Hypertext Application Technology working Group
+
+	HTML5 Mobile
+		Offline Support
+		Canvas and Video
+		Geolocation API
+		Advanced Form
+
+	HTML5 Introduced 28 new elements
+		<section>, <article>, <aside>, <hgroup>, <header>, <footer>, <nav>, <figure>, <figcaption>, <video>, <audio>, <source>, <embed>, <mark>, <progress>, <meter>, <time>, <ruby>, <rt>, <rp>, <wbr>, <canvas>, <command>, <details>, <summary>, <datalist>, <keygen> and <output>
+
+	HTML FORM Input new Attr
+		13 new type attributes
+		Email,url,color,date,datetime,datetime-local,month,time,week,number,range,search
+
+	HTML5 form validate attribtes
+		required,pattern,maxlength,type,min,max 
+		form validate check form.checkValidity() --> return true or false(The form is valid or not)
+
+	HTML5 Audio and Video
+		state of audio and video codec--> WebM,H.265,
+		The codec stand for compressor/decompressor
+		Two type of codecs --> lossy codecs and loseless codecs
+			lossy codecs --> over quality
+						
+

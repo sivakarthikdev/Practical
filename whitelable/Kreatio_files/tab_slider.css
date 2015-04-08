@@ -1,0 +1,33 @@
+/* tab_slider left image with right some list items */
+.slide_bottom_left {     float: left;    padding: 0 9px 10px;    width: 584px;}
+.section_head {      float: left;    width: 100%;}
+.slide_show_block {    float: right;    padding: 8px 0 0;    width: 262px;}
+.slide_list {    float: right;    height: 200px;    overflow: hidden;    width: 262px;}
+.slide_list li {    background: none repeat scroll 0 0 #FFFFFF;    border-bottom: 1px solid #DCDDE3 !important;    float: left;    font-size: 1.5em;    font-weight: bold;      line-height: 16px;    list-style-type: none;    padding:7px 4px 7.8px 10px;    width: 248px; height: 34px;}
+.slide_list li a {    color: #515372;}
+.slide_image {    float: left;    height: 198px;    padding-top: 8px;    width: 340px;}
+.main_image_description_holder {  height: 198px;      position: absolute;    width: 320px;}
+.opaque {    opacity: 0.8;}
+.description {    background: none repeat scroll 0 0 #FFFFFF;    bottom: 0;    clear: both;    color: #000000;    float: none;    font-family: Arial;    font-size: 1.2em;    padding: 5px;    position: absolute;    width: 290px;}
+.common_content_blog a {    color: #000000;}
+.slide_show_block .tab-slider-active {   background: none repeat scroll 0 0 #B30000;}
+.slide_show_block .tab-slider-active a {color:#fff;}
+/*tab_slider left list items with right some images */
+.tab_slider_left .slide_show_block  {float:left;width:280px;}
+.slide_image {   float: right;    height: 198px;    padding-top: 8px;    width: 340px;}
+/*tabsliderbottom some images will come down*/
+.tab_slider_bottom .slide_image {float:left;width:100%;}
+.tab_slider_bottom .slide_show_block {float:left;width:100%;}
+.tab_slider_bottom .slide_list  {float:left;width:600px;height:105px;    text-align: center;}
+.tab_slider_bottom .slide_list li {width:130px;border-bottom:none !important; padding: 9px 10px !important;}
+/*three tabslider caption and image and small imgs*/
+.three_tab_slider {border:1px solid #ddd;padding:10px;width:580px;float: left;}
+.three_tab_slider .section_head {float:left;width:200px;padding-right:10px;}
+.three_tab_slider .slide_image {float:left;width:265px;padding-top:0px;}
+.three_tab_slider .slide_show_block {float:right;width:105px;padding-top:0px;}
+.three_tab_slider .slide_list {width:105px;height:250px;}
+.three_tab_slider .description {width:255px;}
+.three_tab_slider .slide_show_block .ui-state-active {background:none !important;border-left:5px solid #B30000 !important;padding-left:0px !important;}
+
+.three_tab_slider .slide_list li {border-bottom:none !important;height:60px;padding:0 0 0 5px;  margin-bottom: 5px;width:95px;}
+

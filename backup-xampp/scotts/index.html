@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="mainApp">	
+	<head>
+		<title>Scotts Projects</title>
+		<link href="scott.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<div>
+				<section ng-controller="menuController" class="header">
+					<aside><img src="http://www.scotts.com/smg/templateFramework/images/microSites/SCOTTSCOM/images/homepage/smg-logo.png" id="smg-logo" /></aside>					
+					<nav>
+						<a class="menu_list" ng-repeat="menu in menus" ng-href="{{menu.link}}">{{menu.name}}</a> <!-- ng-click="funRoute()" -->
+					</nav>
+				</section>
+				<section class="content">
+					<section class="left_content"></section>
+					<section class="right_content {{transitionState}}" ng-view ng-animate="animate">
+						
+					</section>
+				</section>
+				<section class="footer" ng-controller="menuController">
+					<nav>
+						<a class="menu_list" ng-repeat="menu in menus" ng-href="{{menu.link}}">{{menu.name}}</a>
+					</nav>
+				</section>
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-route.js"></script>
+		<script src="http://code.angularjs.org/1.2.14/angular-animate.min.js"></script>
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="scott.js"></script>
+	</body>
+</html>

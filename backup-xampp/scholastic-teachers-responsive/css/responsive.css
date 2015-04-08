@@ -1,0 +1,89 @@
+@media screen and (max-width: 590px) and (min-width : 480px) {
+	#nav-menus{width:100%;}
+    #nav-menus ul li{clear:both;width:100%;border-bottom: 1px dotted #bbbbbb;}
+	#universal .scholastic_home{width:100%;}
+}
+
+@media screen and (max-width: 768px) and (min-width : 591px) {
+	#nav-menus{width:100%;}
+    #nav-menus ul li:nth-child(5){clear:both;}
+	#universal .scholastic_home{width:100%;}
+}
+
+@media screen and (max-width: 1023px) and (min-width : 768px) {
+	#nav-menus{width:100%;}
+    #nav-menus ul li{}
+	/*#nav-menus ul li:nth-child(6){clear:both;}*/
+	#universal .scholastic_home{width:100%;} 
+}
+
+@media screen and (min-width: 1024px){
+	#nav-menus{width:80%;}
+	#nav-menus ul li{margin:2px;}
+	#universal .scholastic_home{width:18%;}
+}
+
+@media screen and (max-width: 480px) and (min-width: 320px){
+	#universal .scholastic_home{width:70%;}
+	button.btn-responsive-nav {
+		background: #171717;
+		top: 20px !important;
+		display: block;
+		position: absolute;
+		right: 52px;
+		color: #FFF;
+	}
+	element.style {
+}
+	.icon {
+	display: inline-block;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	}
+	.icon-navicon:before, .icon-reorder:before, .icon-bars:before {
+		content: "\f0c9";
+	}
+
+	.btn {
+		display: inline-block;
+		padding: 6px 12px;
+		margin-bottom: 10px;
+		font-weight: normal;
+		line-height: 1.42857143;
+		text-align: center;
+		white-space: nowrap;
+		vertical-align: middle;
+		cursor: pointer;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		background-image: none;
+		border: 1px solid transparent;
+	}
+	#nav-menus{
+		width:100%;
+	}
+	#nav-menus ul {
+		background: #ED1B2F;
+	}
+	#nav-menus ul li {
+		width:100%;
+	}
+	#nav-menus ul li a{
+		right: 5px;
+		color:#fff;
+		border-bottom: 1px dotted #bbbbbb;
+	}
+	#nav-menus ul li a:hover{
+		right: 5px;
+		color:#AAD2DF;
+		background:#343131;
+		border-bottom: 1px dotted #bbbbbb;
+	}
+	#nav-menus ul li:last-child a{border-bottom: 0px dotted #bbbbbb;}
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Html5 Video</title>
+    <style type="text/css">
+           .trstyle{color:red;font-weight: bold}
+        </style>
+
+</head>
+<body>
+    <div id="wrapper">
+            <table border="1" id="table1">
+                <tr><td>Cell 1</td><td>Cell 2</td><td>Cell 3</td><td>Cell 4</td></tr>
+                <tr><td>Cell 1</td><td>Cell 2</td><td>Cell 3</td><td>Cell 4</td></tr>
+                <tr><td>Cell 1</td><td>Cell 2</td><td>Cell 3</td><td>Cell 4</td></tr>
+                <tr><td>Cell 1</td><td>Cell 2</td><td>Cell 3</td><td>Cell 4</td></tr>
+            </table>
+    </div>
+    <script type="text/javascipt" src="jquery-1.9.1.js"></script>
+    <script>
+        $('#table1 tr').click(function(){
+            $(this).addClass('trstyle');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmln="http://www.w3.org/1999/xhtml" ng-app="myApp">
+	<head>
+		<title>HTML5</title>
+		<meta charset="utf-8" />
+		<style type="text/css">
+			.html5Form .form_element{float: left;clear: both;margin:10px;width:70%;}
+			input[required]{border:1px solid #890;}
+			footer{float: left;width:100%;}
+			label { float: left;width: 17%;}
+			input[type='submit']{float: left;}
+		</style>
+	</head>
+	<body ng-controller="pageController">
+		<div id="wrapper" style="background:{{bgColor}}">
+			<header><h1 class=test>HTML5 Examples and API'S</h1></header>
+			<main>
+				<section>
+					<h3 class="section_title">Figure &amp; Figure caption</h3>
+					<figure>
+						<img src="img/DSC_0020.jpg" width="100" height="100" alt="karthikeyan-pics" />
+					</figure>
+				</section>
+				<section class="html5Form">
+					<h3 class="section_title">Forms Element</h3>
+					<form method="get" action="/data" enctype="multipart/form-data" autocomplete="off">
+						<div class="form_element">
+							<label for="fileupload">File Upload:</label>
+							<input type="file" name="fileupload" accept=".mp3" placeholder="Upload Files" required/>
+						</div>
+						<div class="form_element">
+							<label for="email">Email Address:</label>
+							<input type="email" name="email" placeholder="Email Address" multiple required/>
+						</div>
+						<div class="form_element">
+							<label for="telephone">Telephone Number:</label>
+							<input type="telephone" name="telephone" placeholder="Telephone Number" multiple required/>
+						</div>
+						<div class="form_element">
+							<label for="search">Search:</label>
+							<input type="search" name="search" placeholder="search query" />
+						</div>
+						<div class="form_element">
+							<label for="age">Age:</label>
+							<input type="range" name="age" min=10 max=50 step=1/>
+						</div>
+						<div class="form_element">
+							<label for="number">Mobile:</label>
+							<input type="number" name="number" />
+						</div>
+						<div class="form_element">
+							<label for="color">Color:</label>
+							<input type="color" name="color" />
+						</div>
+						<div class="form_element">
+							<label for="dob">Date of Birth:</label>
+							<input type="date" name="date" />
+						</div>
+						<div class="form_element"><input name="submit" type="submit" /></div>
+					</form>
+				</section>
+			</main>
+			<footer>Footer Part</footer>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.12/angular.min.js"></script>
+		<script>
+			var app = angular.module('myApp',[]);
+			app.controller('pageController', function($scope,$location){
+				$scope.bgColor = $location.search().bgcolor;
+				console.log($location.search());
+			});
+		</script>
+	</body>
+</html>

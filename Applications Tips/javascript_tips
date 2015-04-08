@@ -1,0 +1,213 @@
+NaN
+	1+undefined (or) 1*undefined (or) 1/undefined 
+	parseInt('fgfg')
+	parseFloat('a.bc1.23')
+
+	isNaN('red') --> true  //cannot be convert number
+	isNaN(true) --> false //can be convert a number true --> 1,false -->2
+	isNaN(NaN) --> true
+	isNaN('23455') = false(because inside of the quotes have numbers,it return number)
+	isNaN('fgfhdg') = true
+	javascript valid input check --> isNaN(value) if number it will return false
+											  else it will return true
+
+	typeof NaN = "number"  (ie) isNaN(NaN) = true
+	NaN === NaN (NaN is not equal to itself)
+	isFinite() checks whether the input is a number that is neither Infinity nor NaN.
+	typeof Infinity = "number"
+
+	1E309 --> Infinity
+
+	The biggest number in Javascript is 1.7976931348623157e+308
+	so 1E309 is Infinity
+
+	encodeURI,encodeURIComponent,decodeURI,decodeURIcomponent,
+	escape and unescape -- depricated method same as encode decode methods
+
+	eval() -- eval is evil ,avoid mostly uses
+
+	alert is not a part of core javascript,Block the browser thread,no other code will not execute until the alert close or click ok button
+	If you have a busy AJAX-type
+	application, it is generally not a good idea to use alert().
+
+
+undefined
+	var tra = function(){} --> typeof tra it will return "function"
+							   typeof tra() it will return "undefined"
+	Undefined is the value of a variable with no value
+
+Null
+	Variables can be emptied by setting the value to null
+	
+Array
+	arrays are object
+	shorthand - var arr = []
+	longhand - var arr = new Array()  or var arr = Array()
+
+	Array Properies -- > arr.length
+	Array Methods --> 	arr.reverse()
+	
+
+
+	javascript:document.body.contentEditable = "true";document.designMode="on",void 0
+
+Javascript
+	JavaScript and Java are two completely different languages, in both concept and design.
+	Java (invented by Sun) is a more complex programming language in the same category as C.
+
+	ECMA-262 is the official name of the JavaScript standard.
+
+	JavaScript was invented by Brendan Eich. It appeared in Netscape (a no longer existing browser) in 1995, and has been adopted by ECMA (a standard association) since 1997.											  
+	the type="text/javascript" in the <script> tag. This is no longer required. JavaScript is the default scripting language in all modern browsers and in HTML5.
+
+	JavaScript is typically used to manipulate HTML elements.
+
+	The JavaScript is executed by the web browser
+		document.getElementById("demo").innerHTML="My First JavaScript";
+
+		The JavaScript is executed by the web browser. In this case, the browser will access the HTML element with id="demo", and replace its content (innerHTML) with "My First JavaScript".
+
+	Use document.write() only to write directly into the document output.
+	If you execute document.write after the document has finished loading, the entire HTML page will be overwritten
+
+Javascript Statements
+	JavaScript is a sequence of statements to be executed by the browser.
+	
+	JavaScript statements are "commands" to the browser.
+	The purpose of the statements is to tell the browser what to do.
+	This JavaScript statement tells the browser to write "Hello Dolly" inside an HTML element with id="demo":
+	document.getElementById("demo").innerHTML="Hello Dolly";
+
+	JavaScript ignores extra spaces
+	Comments will not be executed by JavaScript.
+	Comments can be added to explain the JavaScript, or to make the code more readable
+
+	Think of variables as containers for storing data.
+
+	Variable names must begin with a letter
+	Variable names can also begin with $ and _ (but we will not use it)
+	Variable names are case sensitive (y and Y are different variables)
+
+Objects
+	An object is a just container for a collection of named values(methods and properties)
+	An object is just a special kind of data, with properties and methods.
+		property : 
+			Properties are the values associated with an object.
+		Method :
+			Methods are the actions that can be performed on objects.
+
+	new - The new operator is used to create an instance of an object. To create an object, 
+
+	this - The reason for all the "this" stuff is that you're going to have more than one constructor function at a time (which constructor function you're dealing with must be clear). That's what "this" is: the instance of the object at hand.
+
+	Creating Objects
+		1. Define and create a direct instance of an object.
+		2. Use a function to define an object, then create new object instances.
+
+			1. Creating a Direct Instance
+				person=new Object();
+				person.firstname="John";
+				person.lastname="Doe";
+				person.age=50;
+				person.eyecolor="blue";
+
+					alternate way --> using Object literals
+
+				person={firstname:"John",lastname:"Doe",age:50,eyecolor:"blue"};
+
+			2. 
+
+	Using an Object Constructor
+		function karthik(name,age,place){
+			   this.name = name;
+			   this.age = age;
+			   this.place = place
+		};
+
+	Creating JavaScript Object Instances
+		var personal1 = new karthik("karthikeyan",27,"trichy");
+		var personal2 = new karthik("siva",58,"trichy");
+
+	Adding Properties to JavaScript Objects
+		personal.state = "Tamilnadu"
+
+		personal --> karthik {name: "karthikeyan", age: 27, place: "trichy", state: "tamilnadu"}
+
+	Adding Methods to JavaScript Objects
+		personal.work = function(name){
+   				return this.name
+		}
+		personal.work() --> return karthikeyan
+
+Event Bubbling and Event Capturing
+	In bubbling the event is first captured and handled by the inner most element and then propagated to outer elements
+
+	In capturing the event is first captured by the outer most element and propagated to the inner most element
+
+	We can use the addEventListener(type, listener, useCapture) to register event handlers for bubbling and capturing phases. To use the capturing phase event handling pass the third argument as true.
+
+	Event capturing
+
+			When you use event capturing
+
+			               | |
+			---------------| |-----------------
+			| element1     | |                |
+			|   -----------| |-----------     |
+			|   |element2  \ /          |     |
+			|   -------------------------     |
+			|        Event CAPTURING          |
+			-----------------------------------
+			the event handler of element1 fires first, the event handler of element2 fires last.
+
+	Event bubbling
+
+			When you use event bubbling
+
+			               / \
+			---------------| |-----------------
+			| element1     | |                |
+			|   -----------| |-----------     |
+			|   |element2  | |          |     |
+			|   -------------------------     |
+			|        Event BUBBLING           |
+			-----------------------------------
+			the event handler of element2 fires first, the event handler of element1 fires last.
+
+	The difference is the order of the execution of the event handlers. Most of the time it will be fine to fire event handlers in the bubbling phase but it can also be necessary to fire them earlier.
+
+	Eg : 
+		Only event bubbling model is supported by all the major browsers. So if you are going to use event capturing still you need to handle event bubbling for IE. So it will easier to use event bubbling instead of capturing.
+
+		<div>
+		    <ul>
+		        <li></li>
+		    </ul>
+		</div>
+
+		If you take this structure and assume that a click event has happened in the li element.
+
+		In capturing model the event will be handled by the div first(click event handlers in the div will fire first) then in the ul then at the last in the target element li.
+
+		In bubbling model it is the opposite. In this model the event will be first handled by the li first and the ul and at the last by the div element.
+
+	
+Apply and Call
+	The main difference is that apply lets you invoke the function with arguments as an array; call requires the parameters be listed explicitly.
+
+	See here and here.
+
+	Pseudo syntax:
+
+	theFunction.apply(valueForThis, arrayOfArgs)
+
+	theFunction.call(valueForThis, arg1, arg2, ...)
+
+	Sample code:
+
+	function theFunction(name, profession) {
+	    alert("My name is " + name + " and I am a " + profession + ".");
+	}
+	theFunction("John", "fireman");
+	theFunction.apply(undefined, ["Susan", "school teacher"]);
+	theFunction.call(undefined, "Claude", "mathematician");

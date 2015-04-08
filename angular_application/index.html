@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Angular Applications</title>
+		<meta charset="utf-8" />
+		<style>
+			section>div{border:1px solid #678;float:left;width: 90%;margin: 10px;padding: 10px;}
+		</style>
+	</head>
+	<body>
+		<section>
+			<!--section id="container-1">
+				<div ng-controller="firstController">
+					<h1>Name : {{name}}</h1>
+				</div>
+			</section>
+			<section id="container-2">
+				<div ng-controller="secondController">
+					<h1>Name : {{name}}</h1>
+				</div>
+			</section-->
+			<section ng-app="application" ng-controller="applicationContro">
+				<div class="ngmodel">
+					Name : <input type="text" ng-model="name" />
+					<p style="color:{{name}}">:{{name | uppercase}}:
+				</div>
+				<div class="ngclick">
+					<button ng-click="toggle()">Click</button>
+					<p ng-show="visible">Hello Mr.Angular</p>
+				</div>
+				<div class="custom-directive">
+					Click : <input type="checkbox" ng-model="check" />
+					<p ng-show="check">Hello Angular</p>
+					<button ng-disabled="check">Press</button>
+				</div>
+				<div class="increment">
+					<p>{{increment()}}</p>
+				</div>
+				<div class="$watch">
+					<input type="text" ng-model="great" placeholder="Please Enter name" />
+					<p>{{greetings}}</p>
+				</div>
+				<div class="nested-controller" ng-controller="nestedController">
+					<p x-ng-bind="name"></p>
+					<p>{{$parent.name}}</p>
+					<p>{{$parent.increment()}}</p>
+				</div>
+				<div class="creat-custom-directive">	
+					<my-element>
+						<p>Test</p>
+					</my-element>
+				</div>
+				<div class="expression">
+					<p>{{value1 + value2}}</p>
+				</div>
+			</section>
+		</section>
+		<script src="js/lib/angular.min.js"></script>
+		<script src="js/module_bootstrap.js"></script>
+	</body>
+</html>
